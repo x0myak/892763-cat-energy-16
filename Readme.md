@@ -1,7 +1,7 @@
-# Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+﻿# Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ольга](https://up.htmlacademy.ru/adaptive/16/user/892763).
-* Наставник: `Неизвестно`.
+* Наставник: `Егор Король`. https://github.com/EgorKorol
 
 ---
 
