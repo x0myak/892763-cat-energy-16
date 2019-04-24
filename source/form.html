@@ -5,14 +5,13 @@
   <title>Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="form">
 <header class="page-header">
   <div class="page-header__wrapper wrapper">
-    <a class="page-header__logo"><img class="page-header__logo-image" src="../source/img/logo-desktop.svg" width="109"
-                                      height="53" alt="Логотип Cat Energy"></a>
+    <a class="page-header__logo"><img class="page-header__logo-image" src="./img/logo-mobile.svg" width="191"
+                                      height="39" alt="Логотип Cat Energy"></a>
     <nav class="header-nav">
       <ul class="header-nav__list site-list">
         <li class="site-list__item">
@@ -30,82 +29,90 @@
 </header>
 <main class="page-main">
   <h1 class="page-main__title">Подбор программы</h1>
-  <h2>Заполните анкету и мы подберем программу питания для вашего кота</h2>
+  <h2 class="page-main__action">Заполните анкету и мы подберем программу питания для вашего кота</h2>
   <form class="form" action="https://htmlacademy.ru" method="get">
     <fieldset>
-      <div>
-        <label>
-          Имя*<input type="text" name="name" placeholder="Барсик" required>
+      <h2 class="visually-hidden">Данные кота</h2>
+      <div class="form__input-wrapper">
+        <label class="form__input-label">
+          <span>Имя*</span><input class="form__input" type="text" name="name" placeholder="Барсик" required>
         </label>
-        <label>
-          Вес (кг)*<input type="text" name="name" placeholder="7" required>
+        <label class="form__input-label">
+          <span>Вес (кг)*</span><input class="form__input" type="text" name="name" placeholder="7" required>
         </label>
-        <label>
-          Возраст (лет)*<input type="text" name="name" placeholder="7">
+        <label class="form__input-label">
+          <span>Возраст (лет)*</span><input class="form__input" type="text" name="name" placeholder="7">
         </label>
       </div>
-      <div>
-        <label>
-          <input type="radio" name="programm" value="weigth-loss">
+      <div class="form__radio-wrapper">
+        <h2 class="visually-hidden">Опции</h2>
+        <label class="form__input-label">
+          <input class="form__radio" type="radio" name="programm" value="weigth-loss">
           Похудение
         </label>
-        <label>
-          <input type="radio" name="programm" value="weigth-gain">
+        <label class="form__input-label">
+          <input class="form__radio" type="radio" name="programm" value="weigth-gain">
           Набор массы
         </label>
-        <label>
-          <input type="radio" name="programm" value="advice">
+        <label class="form__input-label">
+          <input class="form__radio" type="radio" name="programm" value="advice">
           Не знаю (нужен ваш совет)
         </label>
       </div>
     </fieldset>
     <fieldset>
       <legend>Контактные данные (владельца кота)</legend>
-      <label>
-        e-mail* <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+      <label class="form__input-label">
+        e-mail* <input class="form__contact" type="email" name="email" placeholder="kuklachev@gmail.com" required>
       </label>
-      <label>
-        Телефон* <input type="tel" name="phone" placeholder="8(960)900-60-90" required>
+      <label class="form__input-label">
+        Телефон* <input class="form__contact" type="tel" name="phone" placeholder="8(960)900-60-90" required>
       </label>
     </fieldset>
     <fieldset>
       <legend>Комментарий</legend>
-      <textarea rows="5" placeholder="Расскажите обо всех повадках кота ">
+      <textarea class="form__textarea" rows="5" placeholder="Расскажите обо всех повадках кота ">
             </textarea>
     </fieldset>
     <fieldset>
       <legend>Дополнительно</legend>
-      <label>
-        <input type="checkbox" name="sweetener" checked>Сахарозаменитель
+      <label class="form__input-label">
+        <input class="form__checkbox" type="checkbox" name="sweetener" checked>Сахарозаменитель
       </label>
-      <label>
-        <input type="checkbox" name="water">Питьевая вода
+      <label class="form__input-label">
+        <input class="form__checkbox" type="checkbox" name="water">Питьевая вода
       </label>
-      <label>
-        <input type="checkbox" name="milk">Молоко
+      <label class="form__input-label">
+        <input class="form__checkbox" type="checkbox" name="milk">Молоко
       </label>
-      <label>
-        <input type="checkbox" name="vitamins">Витамины
+      <label class="form__input-label">
+        <input class="form__checkbox" type="checkbox" name="vitamins">Витамины
       </label>
     </fieldset>
     <button class="form__button">Отправить заявку</button>
-    <b>* - Обязательные поля</b>
+    <span>* - Обязательные поля</span>
   </form>
 
 </main>
 <footer class="page-footer">
-  <a class="page-footer__map" href="#" target="_blank" ><img src="./source/img/map.jpg" width="1440" height="400" alt="Точка на карте - Большая Конюшенная, 19."></a>
+  <a class="page-footer__map" href="#" target="_blank"><img src="./source/img/map.jpg" width="1440" height="400"
+                                                            alt="Точка на карте - Большая Конюшенная, 19."></a>
   <div class="page-footer__wrapper wrapper">
-    <a class="page-footer__logo-image"><img src="./source/img/footer-logo.svg" width="128" height="24" alt="Логотип Cat Energy"></a>
+    <a class="page-footer__logo-image"><img src="./source/img/footer-logo.svg" width="128" height="24"
+                                            alt="Логотип Cat Energy"></a>
     <div class="page-footer__social">
       <ul class="social">
-        <li><a class="social__button social__button--vk" href="#" target="_blank" rel="noopener noreferrer" aria-label="vk"></a></li>
-        <li><a class="social__button social__button--fb" href="#" target="_blank" rel="noopener noreferrer" aria-label="facebook"></a></li>
-        <li><a class="social__button social__button--insta" href="#" target="_blank" rel="noopener noreferrer" aria-label="instagram"></a></li>
+        <li><a class="social__button social__button--vk" href="#" target="_blank" rel="noopener noreferrer"
+               aria-label="vk"></a></li>
+        <li><a class="social__button social__button--fb" href="#" target="_blank" rel="noopener noreferrer"
+               aria-label="facebook"></a></li>
+        <li><a class="social__button social__button--insta" href="#" target="_blank" rel="noopener noreferrer"
+               aria-label="instagram"></a></li>
       </ul>
     </div>
     <div class="developer">
-      <a class="developer__academy" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener noreferrer">HTML Academy</a>
+      <a class="developer__academy" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"
+         rel="noopener noreferrer">HTML Academy</a>
     </div>
   </div>
 </footer>
