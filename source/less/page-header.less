@@ -1,22 +1,37 @@
 .page-header {
   width: 100%;
+  min-height: 65px; /*временно*/
 }
 
-.page-header__wrapper {
-  box-sizing: border-box;
-  width: 320px;
-  position: relative;
-  background-color: @white;
-  color: @grey;
+.page-header__wrapper {    
+  background-color: @white;  
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 }
 
 .page-header__logo {
-  padding: 11px 109px 15px 20px;
+  margin: 11px 0 12px 20px;
 }
 
 .header-nav__list {  
-  list-style: none;
+  list-style: none;  
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {    
+    flex-direction: row;       
+  }
+
+  .page-header__logo {
+    margin-top: 24px;
+    margin-left: 29px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+   .page-header__wrapper {    
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
