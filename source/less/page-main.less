@@ -4,8 +4,15 @@
   color: @white;
 }
 
-.page-main__wrapper {
-  min-width: 320px;
+@media (min-width: @tablet-width) {
+  .page-main {
+    text-align: left;
+    color: @black1;
+  }
+
+  .page-main__wrapper {
+    margin-left: 120px; 
+  }
 }
 
 .page-main__container {
@@ -13,6 +20,13 @@
   min-height: 305px;
   background: url("../img/index-background-mobile.jpg") no-repeat;
   background-size: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__container {
+    background: none;
+    background-color: @white;
+  }
 }
 
 .page-main__title {
@@ -23,10 +37,35 @@
   font-weight: normal;
 }
 
+@media (min-width: @tablet-width) {
+  .page-main__title {
+    padding: 0;
+    padding-top: 68px;
+    padding-right: 208px;
+    padding-bottom: 33px;
+    font-size: 60px;
+    line-height: 1;   
+  }
+}
+
+/*@media (min-width: @desktop-width) {
+  .page-main__title {    
+    padding-right: 208px;      
+  }
+}*/
+
 .page-main__slogan {
   font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__slogan {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1;   
+  }
 }
 
 .page-main__link {
@@ -41,6 +80,18 @@
   background-color: @green;
 }
 
+@media (min-width: @tablet-width) {
+  .page-main__link {
+    display: inline-block;
+    padding-top: 17px;
+    padding-right: 29px;
+    padding-bottom: 15px;
+    padding-left: 26px;
+    font-size: 20px;
+    line-height: 1;    
+  }
+}
+
 /*.page-main__logo-image {
   position: absolute;
   top: 450px;
@@ -49,41 +100,4 @@
 
 .page-main__container-mobile {
   margin: 0 20px;
-}
-
-.options__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.options__item {
-  margin-top: 20px;
-  background-color: #f2f2f2;
-}
-
-.options__title {
-  padding-top: 29px;
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 1.54;
-  color: @black1;
-}
-
-.options__description {
-  margin: 36px 35px 23px 21px;
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 1.29;
-  text-align: left;
-}
-
-.options__link {
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 22px;
-  font-size: 16px;
-  text-align: left;
-  text-decoration: none;
-  color: @black1;
 }
