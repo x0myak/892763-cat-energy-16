@@ -7,7 +7,8 @@
 }
 
 .site-list__item {
-  border-bottom: 1px solid lightgrey;  
+  font-weight: 500;
+  border-bottom: 1px solid lightgrey;
 }
 
 .site-list__link {
@@ -15,10 +16,8 @@
   margin: 24px auto;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
-  font-weight: 500;
   line-height: 20px;
-  text-align: center;  
-
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   color: @black1;
@@ -26,23 +25,21 @@
 
 @media (min-width: @tablet-width) {
   .site-list {
-    flex-direction: row;       
-    margin-right: 31px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  .site-list__item {       
-    margin-top: 47px;    
+  .site-list__item {
     border-bottom: none;
-  }
-
-  .site-list__link {    
-    margin: 0;    
-    padding-bottom: 12px;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 1.39px;
     font-weight: normal;
     text-align: left;
-    
+  }
+
+  .site-list__link {
+    margin: 0;
+    padding-bottom: 12px;
 
     &--active {
       border-bottom: 2px solid @green;
@@ -52,7 +49,20 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
+    justify-content: flex-center;
+    margin-left: 133px;
+  }
+
+  .site-list__item {
     margin-top: 77px;
-    margin-right: 110px;
-  }  
+  }
+
+  .site-list__link {
+    color: @white;
+    background: @green; /*временно*/
+
+    &--active {
+      border-bottom: 2px solid @white;
+    }
+  }
 }
