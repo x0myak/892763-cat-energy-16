@@ -1,8 +1,39 @@
+.benefits {
+  margin-bottom: 42px;
+}
+
+@media (min-width: @tablet-width) {
+  .benefits {
+    margin-bottom: 44px;
+  }
+}
+
 .benefits__list {
   list-style: none;
+  padding-left: 78px;
+}
+
+@media (min-width: @tablet-width) {
+  .benefits__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0  104px 0 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .benefits__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+  }
 }
 
 .benefits__title {
+  margin-top: 10px;
+  margin-bottom: 28px;
   font-size: 36px;
   line-height: 1.67;
   text-align: left;
@@ -11,23 +42,75 @@
 
 @media (min-width: @tablet-width) {
   .benefits__title {
+    margin-top: 0;
+    margin-bottom: 37px;
     font-size: 60px;
     line-height: 1;
   }
 }
 
 .benefits__item {
+  position: relative;
+  min-height: 48px;
   margin-bottom: 32px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.29;
   text-align: left;
   color: @grey;
+
+  &::after {
+    content: "";
+    position: absolute;
+    align-self: start;
+    top: -5px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px auto;
+  }
+
+  &--nutrients::after {
+    background-image: url("../img/advantage-leaf@1x.png");
+    background-color: @green;
+  }
+
+  &--form::after {
+    background-image: url("../img/advantage-powder@1x.png");
+    background-color: @green;
+  }
+
+  &--intake::after {
+    background-image: url("../img/advantage-dining@1x.png");
+    background-color: @green;
+  }
+
+  &--changes::after {
+    background-image: url("../img/advantage-clock@1x.png");
+    background-color: @green;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .benefits__item {
+    width: 201px;
+    padding-top: 180px;
+    padding-right: 80px;
     font-size: 16px;
     line-height: 1.5;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 60px;
+      width: 80px;
+      height: 80px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80px auto;
+    }
   }
 }

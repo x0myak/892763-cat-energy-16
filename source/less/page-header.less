@@ -3,52 +3,121 @@
 }
 
 .page-header__wrapper {
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  position: relative;
   margin: 0 auto;
-}
-
-.page-header__logo {
-  margin: 11px 0 12px 20px;
-}
-
-.header-nav__list {
-  list-style: none;
+  background-color: #ffffff;
 }
 
 @media (min-width: @tablet-width) {
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    margin-top: 54px;
+    margin-bottom: 30px;
+  }
+}
+
+.page-header__logo {
+  display: block;
+  margin: 11px 0 12px 20px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
   }
 
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: @tablet-width) {
   .page-header__logo {
     width: 174px;
-    margin-top: 24px;
+    margin-top: 0;
     margin-left: 29px;
     margin-bottom: 0;
-  }
-
-  .header-nav {
-    margin-top: 47px;
-    margin-right: 31px;
-    margin-left: 96px;
-    flex-grow: 1;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    flex-basis: 50%;
+    width: 202px;
+    //flex-basis: 50%;
     margin-top: 53px;
     margin-left: 109px;
   }
+}
 
+.header-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
   .header-nav {
-    flex-basis: 50%;
-    flex-grow: 0;
-    margin: 0;
-    margin-right: 110px;
+    flex-direction: row;
+    margin-left: auto;
+    align-items: center;
+    margin-top: 5px;
+    padding-right: 30px;
+  }
+}
+
+.header-nav__list {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 47px;
+  margin-right: 31px;
+  margin-left: 96px;
+  flex-grow: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .header-nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header-nav__list {
+    margin-left: 133px;
+  }
+}
+
+.header-nav__toggle {
+  position: absolute;
+  top: 23px;
+  right: 0;
+  z-index: 2;
+
+  width: 24px;
+  height: 18px;
+  font-size: 0;
+
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .header-nav__toggle {
+    display: none;
   }
 }

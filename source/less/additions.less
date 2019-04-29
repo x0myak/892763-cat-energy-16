@@ -1,3 +1,10 @@
+@media (min-width: @desktop-width) {
+  .additions__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .additions__title {
   font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-size: 24px;
@@ -10,12 +17,31 @@
 }
 
 .additions__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .additions__item {
   line-height: 1.25;
   color: @grey;
+}
+
+@media (min-width: @desktop-width) {
+  .additions__item {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.additions__inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.additions__wrapper-tablet {
+  display: flex;
+  justify-content: space-between;
 }
 
 .additions__field {
@@ -55,6 +81,7 @@
 }
 
 .additions__button {
+  width: 100%;
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
@@ -62,6 +89,12 @@
   text-transform: uppercase;
   color: #ffffff;
   background-color: @green;
+}
+
+@media (min-width: @desktop-width) {
+  .additions__button {
+    width: 245px;
+  }
 }
 
 .additions__gift {

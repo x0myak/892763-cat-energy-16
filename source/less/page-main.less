@@ -11,7 +11,8 @@
   }
 
   .page-main__wrapper {
-    margin-left: 120px;
+    position: relative;
+    margin: 0 30px;
   }
 }
 
@@ -24,14 +25,27 @@
 
 @media (min-width: @tablet-width) {
   .page-main__container {
+    min-height: 0;
+    padding-left: 90px;
     background: none;
     background-color: #ffffff;
   }
 }
 
+.page-main__container-mobile {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__container-mobile {
+    padding: 0;
+  }
+}
+
 .page-main__title {
   margin: 0;
-  padding: 29px 35px 19px 36px;
+  padding: 29px 11% 20px 11%;
   font-size: 36px;
   line-height: 1;
 }
@@ -60,6 +74,7 @@
 
 .page-main__link {
   display: block;
+  margin-top: 135px;
   padding: 12px 0 10px 0;
   font-size: 14px;
   line-height: 18px;
@@ -72,18 +87,25 @@
 @media (min-width: @tablet-width) {
   .page-main__link {
     display: inline-block;
+    margin-top: 48px;
+    margin-left: 90px;
     padding: 17px 29px  15px 26px;
     font-size: 20px;
     line-height: 1;
   }
 }
 
-/*.page-main__logo-image {
+.page-main__logo-image {
   position: absolute;
   top: 450px;
-  left: 70px;
-}*/
+  margin-left: -150px;
+}
 
-.page-main__container-mobile {
-  margin: 0 20px;
+@media (min-width: @tablet-width) {
+  .page-main__logo-image {
+    width: 709px;
+    height: 609px;
+    top: 300px;
+    margin-left: -29px;
+  }
 }

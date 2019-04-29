@@ -33,41 +33,45 @@
     <form class="form" action="https://htmlacademy.ru" method="get">
       <fieldset>
         <h2 class="visually-hidden">Данные кота</h2>
-        <div class="form__input-wrapper">
-          <label class="form__input-label">
-            <span>Имя*</span><input class="form__input" type="text" name="name" placeholder="Барсик" required>
-          </label>
-          <label class="form__input-label">
-            <span>Вес (кг)*</span><input class="form__input" type="text" name="name" placeholder="7" required>
-          </label>
-          <label class="form__input-label">
-            <span>Возраст (лет)*</span><input class="form__input" type="text" name="name" placeholder="7">
-          </label>
-        </div>
-        <div class="form__radio-wrapper">
-          <h2 class="visually-hidden">Опции</h2>
-          <label class="form__input-label">
-            <input class="form__radio" type="radio" name="programm" value="weigth-loss">
-            Похудение
-          </label>
-          <label class="form__input-label">
-            <input class="form__radio" type="radio" name="programm" value="weigth-gain">
-            Набор массы
-          </label>
-          <label class="form__input-label">
-            <input class="form__radio" type="radio" name="programm" value="advice">
-            Не знаю (нужен ваш совет)
-          </label>
+        <div class="form__container">
+          <div class="form__input-wrapper">
+            <label class="form__input-label">
+              <span class="form__text">Имя*</span><input class="form__input" type="text" name="name" placeholder="Барсик" required>
+            </label>
+            <label class="form__input-label">
+              <span class="form__text">Вес (кг)*</span><input class="form__input" type="text" name="name" placeholder="7" required>
+            </label>
+            <label class="form__input-label--last">
+              <span class="form__text">Возраст (лет)*</span><input class="form__input" type="text" name="name" placeholder="7">
+            </label>
+          </div>
+          <div class="form__radio-wrapper">
+            <h2 class="visually-hidden">Опции</h2>
+            <label class="form__radio-label">
+              <input class="form__radio" type="radio" name="programm" value="weigth-loss">
+              Похудение
+            </label>
+            <label class="form__radio-label">
+              <input class="form__radio" type="radio" name="programm" value="weigth-gain">
+              Набор массы
+            </label>
+            <label class="form__radio-label">
+              <input class="form__radio" type="radio" name="programm" value="advice">
+              Не знаю (нужен ваш совет)
+            </label>
+          </div>
         </div>
       </fieldset>
       <fieldset>
         <legend class="form__legend">Контактные данные (владельца кота)</legend>
-        <label class="form__input-label">
-          e-mail* <input class="form__contact" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-        </label>
-        <label class="form__input-label">
-          Телефон* <input class="form__contact" type="tel" name="phone" placeholder="8(960)900-60-90" required>
-        </label>
+        <div class="form__contact-wrapper">
+          <label class="form__input-label">
+            e-mail* <input class="form__contact" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+          </label>
+          <label class="form__input-label">
+            Телефон* <input class="form__contact" type="tel" name="phone" placeholder="8(960)900-60-90" required>
+          </label>
+        </div>
       </fieldset>
       <fieldset>
         <legend class="form__legend">Комментарий</legend>
@@ -76,29 +80,37 @@
       </fieldset>
       <fieldset>
         <legend class="form__legend">Дополнительно</legend>
-        <label class="form__input-label">
-          <input class="form__checkbox" type="checkbox" name="sweetener" checked>Сахарозаменитель
-        </label>
-        <label class="form__input-label">
-          <input class="form__checkbox" type="checkbox" name="water">Питьевая вода
-        </label>
-        <label class="form__input-label">
-          <input class="form__checkbox" type="checkbox" name="milk">Молоко
-        </label>
-        <label class="form__input-label">
-          <input class="form__checkbox" type="checkbox" name="vitamins">Витамины
-        </label>
+        <div class="form__additions-wrapper">
+          <label class="form__additions-label">
+            <input class="form__checkbox" type="checkbox" name="sweetener" checked><span class="form__text-additions">Сахарозаменитель</span>
+          </label>
+          <label class="form__additions-label">
+            <input class="form__checkbox" type="checkbox" name="water"><span class="form__text-additions">Питьевая вода</span>
+          </label>
+          <label class="form__additions-label">
+            <input class="form__checkbox" type="checkbox" name="milk"><span class="form__text-additions">Молоко</span>
+          </label>
+          <label class="form__additions-label--last">
+            <input class="form__checkbox" type="checkbox" name="vitamins"><span class="form__text-additions">Витамины</span>
+          </label>
+        </div>
       </fieldset>
       <button class="form__button">Отправить заявку</button>
       <span class="form-required">* - Обязательные поля</span>
     </form>
   </div>
-
 </main>
 <footer class="page-footer">
-  <a class="page-footer__map" href="#" target="_blank"><img src="./img/map.jpg" width="1440" height="400"
+  <div class="page-footer__wrapper">
+    <div class="page-footer__contact">
+      <p class="page-footer__slogan">приглашаем к сотрудничеству дилеров!</p>
+      <p class="page-footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    </div>
+  </div>
+  <a class="page-footer__map" href="#" target="_blank"><img src="./img/map.jpg" width="320" height="400"
                                                             alt="Точка на карте - Большая Конюшенная, 19."></a>
-  <div class="page-footer__wrapper wrapper">
+
+  <div class="page-footer__container">
     <a class="page-footer__logo-image"><img src="./img/footer-logo.svg" width="128" height="24"
                                             alt="Логотип Cat Energy"></a>
     <div class="page-footer__social">

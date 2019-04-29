@@ -1,3 +1,14 @@
+.options {
+  margin-bottom: 42px;
+}
+
+@media (min-width: @tablet-width) {
+  .options {
+    margin-top: 529px;
+    margin-bottom: 44px;
+  }
+}
+
 .options__description {
   margin: 36px 35px 23px 21px;
   font-family: "Arial", sans-serif;
@@ -5,12 +16,20 @@
   line-height: 1.29;
   text-align: left;
   color: #444444;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+@media (min-width: @tablet-width) {
+  .options__description {
+    padding: 26px 285px 61px 52px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 .options__link {
   display: block;
-  margin-top: 20px;
-  margin-bottom: 22px;
+  padding: 20px 0 22px 20px;
   font-size: 16px;
   text-align: left;
   text-decoration: none;
@@ -18,8 +37,12 @@
   color: @black1;
 }
 
-.options ul {
-  list-style: none;
+@media (min-width: @tablet-width) {
+  .options__link {
+    padding: 0 0 62px 53px;
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .options__list {
@@ -28,36 +51,101 @@
   padding: 0;
 }
 
+@media (min-width: @desktop-width) {
+  .options__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .options__item {
+  position: relative;
   margin-top: 20px;
   background-color: #f2f2f2;
 }
 
+@media (min-width: @desktop-width) {
+  .options__item {
+    min-width: 570px;
+  }
+}
+
 .options__title {
+  position: relative;
+  margin: 0;
   padding-top: 29px;
+  padding-left: 92px;
   font-size: 24px;
   line-height: 1.54;
   text-transform: uppercase;
   color: @black1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @green;
+  }
+
+  &--loose::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: url("../img/icon-cat-slim.svg") no-repeat center;
+  }
+
+  &--gain::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 67px;
+    height: 50px;
+    background: url("../img/icon-cat-pro.svg") no-repeat center;
+  }
 }
+
 
 @media (min-width: @tablet-width) {
   .options__title {
+    padding-top: 81px;
+    padding-left: 52px;
     font-size: 36px;
     line-height: 1.03;
-  }
-}
 
-@media (min-width: @tablet-width) {
-  .options__description {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-}
+    &::before {
+      top: 92px;
+      left: auto;
+      right: 62px;
+      width: 200px;
+      height: 200px;
+    }
 
-@media (min-width: @tablet-width) {
-  .options__link {
-    font-size: 20px;
-    line-height: 1;
+    &--loose {
+      &::after {
+        top: 80px;
+        left: auto;
+        right: 80px;
+        width: 141px;
+        height: 194px;
+      }
+    }
+
+    &--gain {
+      &::after {
+        top: 120px;
+        left: auto;
+        right: 35px;
+        width: 268px;
+        height: 113px;
+      }
+    }
   }
 }
