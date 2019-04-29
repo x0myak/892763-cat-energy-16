@@ -1,13 +1,27 @@
 .others__title {
-  font-size: 20px;
-  text-align: center;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
   text-transform: uppercase;
 }
 
-.others__description {
-  text-align: center;
-  color: #444444;
+@media (min-width: @tablet-width) {
+  .others__title {
+    font-size: 20px;
+  }
 }
+
+.others__description {
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+@media (min-width: @tablet-width) {
+  .others__description {
+    font-size: 16px;
+  }
+}
+
 
 .others__link {
   display: block;
@@ -19,3 +33,16 @@
   color: #444444;
   background-color: #f2f2f2;
 }
+
+
+/*.others__title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.others__description {
+  text-align: center;
+  color: #444444;
+}
+
+*/

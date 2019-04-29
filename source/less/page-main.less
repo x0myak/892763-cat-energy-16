@@ -1,15 +1,89 @@
+.page-main {
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main {
+    text-align: left;
+    color: @black1;
+  }
+
+  .page-main__wrapper {
+    margin-left: 120px;
+  }
+}
+
+.page-main__container {
+  width: 100%;
+  min-height: 305px;
+  background: url("../img/index-background-mobile.jpg") no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__container {
+    background: none;
+    background-color: #ffffff;
+  }
+}
+
 .page-main__title {
-  font-size: 60px;
+  margin: 0;
+  padding: 29px 35px 19px 36px;
+  font-size: 36px;
+  line-height: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__title {
+    margin: 0;
+    padding: 68px 208px 33px 0;
+    font-size: 60px;
+    line-height: 1;
+  }
 }
 
 .page-main__slogan {
+  font-size: 14px;
   text-transform: uppercase;
 }
 
+@media (min-width: @tablet-width) {
+  .page-main__slogan {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
 .page-main__link {
+  display: block;
+  padding: 12px 0 10px 0;
+  font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
-  color: @white;
-
+  color: #ffffff;
   background-color: @green;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__link {
+    display: inline-block;
+    padding: 17px 29px  15px 26px;
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+/*.page-main__logo-image {
+  position: absolute;
+  top: 450px;
+  left: 70px;
+}*/
+
+.page-main__container-mobile {
+  margin: 0 20px;
 }

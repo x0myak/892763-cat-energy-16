@@ -1,3 +1,16 @@
+.catalog__title {
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 1.67;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__title {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
+
 .catalog-list {
   list-style: none;
 }
@@ -7,24 +20,40 @@
 }
 
 .catalog-list__title {
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-size: 20px;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
 }
 
 .catalog-list__field {
+  font-size: 12px;
+  line-height: 1.33;
   color: @grey;
 }
 
 .catalog-list__value {
+  font-size: 12px;
+  line-height: 1.33;
   text-align: right;
   color: @grey;
 }
 
+@media (min-width: @tablet-width) {
+  .catalog-list__field {
+    font-size: 16px;
+  }
+
+  .catalog-list__value {
+    font-size: 16px;
+  }
+}
+
 .catalog-list__button {
+  font-size: 16px;
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
-  color: @white;
+  color: #ffffff;
   background-color: @green;
 }
