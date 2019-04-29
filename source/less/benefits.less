@@ -4,18 +4,30 @@
 
 .benefits__title {
   font-size: 36px;
-  font-weight: normal;
   line-height: 1.67;
   text-align: left;
   color: @black1;
+}
+
+@media (min-width: @tablet-width) {
+  .benefits__title {
+    font-size: 60px;
+    line-height: 1;
+  }
 }
 
 .benefits__item {
   margin-bottom: 32px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
-  font-weight: normal;
   line-height: 1.29;
   text-align: left;
   color: @grey;
+}
+
+@media (min-width: @tablet-width) {
+  .benefits__item {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }

@@ -3,12 +3,28 @@
 }
 
 .sample__title {
-  font-size: 60px;
+  font-size: 36px;
+  line-height: 1.67;
+  color: @black1;
+}
+
+@media (min-width: @tablet-width) {
+  .sample__title {
+    font-size: 60px;
+    line-height: 1;
+  }
 }
 
 .sample__description {
   font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.29;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .sample__description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
