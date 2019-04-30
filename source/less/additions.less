@@ -1,5 +1,16 @@
 .additions__title {
-  font-size: 36px;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
+  font-size: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .additions__title {
+    font-size: 36px;
+  }
+}
+
+.additions__list {
+  list-style: none;
 }
 
 .additions__item {
@@ -9,10 +20,38 @@
 
 .additions__field {
   font-family: "Oswald", "Helvetica", "Arial", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
   color: @black1;
+}
+
+@media (min-width: @tablet-width) {
+  .additions__field {
+    font-size: 20px;
+  }
+}
+
+.additions__volume {
+  font-size: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .additions__volume {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.additions__value {
+  font-size: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .additions__value {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 .additions__button {
@@ -21,6 +60,12 @@
   text-align: center;
 
   text-transform: uppercase;
-  color: @grey;
+  color: #ffffff;
   background-color: @green;
+}
+
+.additions__gift {
+  line-height: 1.25;
+  color: #ffffff;
+  background-color: @green;/* временно*/
 }
