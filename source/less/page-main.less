@@ -19,6 +19,7 @@
 .page-main__container {
   width: 100%;
   min-height: 305px;
+  margin-bottom: 135px;
   background: url("../img/index-background-mobile.jpg") no-repeat;
   background-size: cover;
 }
@@ -26,6 +27,7 @@
 @media (min-width: @tablet-width) {
   .page-main__container {
     min-height: 0;
+    margin-bottom: 20px;
     padding-left: 90px;
     background: none;
     background-color: #ffffff;
@@ -86,6 +88,8 @@
 
 @media (min-width: @tablet-width) {
   .page-main__link {
+    position: absolute;
+    top: 240px;
     display: inline-block;
     margin-top: 48px;
     margin-left: 90px;
@@ -103,9 +107,10 @@
 
 @media (min-width: @tablet-width) {
   .page-main__logo-image {
+    position: relative;
+    top: 0;
     width: 709px;
     height: 609px;
-    top: 300px;
     margin-left: -29px;
   }
 }

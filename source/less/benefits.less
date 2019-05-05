@@ -53,7 +53,7 @@
   position: relative;
   min-height: 48px;
   margin-bottom: 32px;
-  font-family: "Arial", sans-serif;
+  font-family: @second-font;
   font-size: 14px;
   line-height: 1.29;
   text-align: left;
@@ -70,26 +70,23 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60px auto;
+    background-color: @green;
   }
 
   &--nutrients::after {
     background-image: url("../img/advantage-leaf@1x.png");
-    background-color: @green;
   }
 
   &--form::after {
     background-image: url("../img/advantage-powder@1x.png");
-    background-color: @green;
   }
 
   &--intake::after {
     background-image: url("../img/advantage-dining@1x.png");
-    background-color: @green;
   }
 
   &--changes::after {
     background-image: url("../img/advantage-clock@1x.png");
-    background-color: @green;
   }
 }
 
