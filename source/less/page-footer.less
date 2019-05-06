@@ -119,16 +119,28 @@
 }
 
 .page-footer__map {
+  position: relative;
   margin: 0 auto;
-  background-image: url("../img/bg-map-mobile@1x.png");
-  min-height: 400px;
+  /*background-image: url("../img/bg-map-mobile@1x.png");
+  min-height: 400px;*/
   background-size: cover;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 53px;
+    top: -150px;
+    right: 0;
+    left: 120px;
+    background: url("../img/map-pin.png") no-repeat center;     
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-footer__map {
-    background-image: url("../img/bg-map-tablet@1x.png");
+    /*background-image: url("../img/bg-map-tablet@1x.png");
     width: 767px;
-    height: 400px;
+    height: 400px;*/
   }
 }

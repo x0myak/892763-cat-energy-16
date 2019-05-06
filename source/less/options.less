@@ -8,6 +8,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .options {
+    margin-bottom: 79px;
+  }
+}
+
 .options__description {
   margin: 36px 35px 23px 21px;
   font-family: "Arial", sans-serif;
@@ -21,6 +27,15 @@
 @media (min-width: @tablet-width) {
   .options__description {
     padding: 26px 285px 61px 52px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .options__description {
+    margin: 35px 0 0 0;
+    padding: 45px 52px 36px;
     font-size: 16px;
     line-height: 1.5;
   }
@@ -65,7 +80,8 @@
 
 @media (min-width: @desktop-width) {
   .options__item {
-    min-width: 570px;
+    max-width: 570px;
+    height: 372px;
   }
 }
 
@@ -144,6 +160,40 @@
         right: 35px;
         width: 268px;
         height: 113px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .options__title {    
+    padding-left: 216px;   
+
+    &::before {
+      top: 42px;      
+      right: 0;
+      left: 50px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--loose {
+      &::after {
+        top: 33px;        
+        right: 0;
+        left: 60px;
+        width: 71px;
+        height: 97px;
+      }
+    }
+
+    &--gain {
+      &::after {
+        top: 60px;
+        left: 35px;
+        right: 0;
+        width: 134px;
+        height: 57px;
       }
     }
   }
