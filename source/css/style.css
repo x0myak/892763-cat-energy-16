@@ -1082,7 +1082,6 @@ fieldset {
 @media (min-width: 1268px) {
   .header-nav {
     position: relative;
-    /* z-index: 2;*/
     margin: 0;
     padding: 0;
   }
