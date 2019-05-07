@@ -1,23 +1,12 @@
 .page-header {
-  width: 100%;
-}
-
-@media (min-width: @desktop-width) {
-  .page-header {
-    width: 1440px;
-  }
-}
-
-.page-header__wrapper {
+  margin-top: 11px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
-  position: relative;
-  margin: 0 auto;
-  background-color: #ffffff;
 }
 
 @media (min-width: @tablet-width) {
-  .page-header__wrapper {
+  .page-header {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 24px;
@@ -25,16 +14,14 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__wrapper {
-    margin: 0;
-    margin-top: 54px;
-    padding: 0 110px;
+  .page-header {    
+    margin-top: 54px;    
   }
 }
 
 .page-header__logo {
-  display: block;
-  margin: 11px 0 12px 20px;
+  width: 191px;
+  height: 39px;
   cursor: pointer;
 
   &:hover,
@@ -50,40 +37,34 @@
 @media (min-width: @tablet-width) {
   .page-header__logo {
     width: 174px;
-    margin-top: 0;
-    margin-left: 29px;
-    margin-bottom: 0;
+    height: 59px;
+    flex-grow: 1; 
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    width: 203px;
-    height: 60px;
-    margin: 0;
+    width: 203px;   
   }
 }
 
 .header-nav {
   display: flex;
   flex-direction: column;
+  flex-grow: 2;  
 }
 
 @media (min-width: @tablet-width) {
   .header-nav {
     flex-direction: row;
-    margin-left: auto;
-    align-items: center;
-    margin-top: 5px;
-    padding-right: 30px;
+    justify-content: space-between;
+      
   }
 }
 
 @media (min-width: @desktop-width) {
   .header-nav {
-    position: relative;
-    margin: 0;
-    padding: 0;
+    
   }
 }
 
@@ -91,32 +72,27 @@
   list-style: none;
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 47px;
-  margin-right: 31px;
-  margin-left: 96px;
-  flex-grow: 1;
+  flex-direction: column;  
 }
 
 @media (min-width: @tablet-width) {
   .header-nav__list {
     flex-direction: row;
     justify-content: space-between;
+    flex-grow: 2;
   }
 }
 
 @media (min-width: @desktop-width) {
   .header-nav__list {
-    margin-left: 133px;
+    
   }
 }
 
 .header-nav__toggle {
   position: absolute;
   top: 23px;
-  right: 0;
-  z-index: 2;
+  right: 20px; 
 
   width: 24px;
   height: 18px;
@@ -135,3 +111,4 @@
     display: none;
   }
 }
+
