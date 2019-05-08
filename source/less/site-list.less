@@ -6,7 +6,9 @@
 
 .site-list__item {
   font-family: "Oswald", "Arial", sans-serif;
-    
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;  
   border-bottom: 1px solid lightgrey;
 }
 
@@ -27,15 +29,14 @@
 @media (min-width: @desktop-width) {
   .site-list__item {
     font-size: 20px;
-    line-height: 1.25px;
-    
+    line-height: 1.25px;    
   }
 }
 
 .site-list__link {
   padding: 24px 0;
-  display: block; 
-   
+  display: block;
+  color: @black1;
   text-decoration: none;
   text-transform: uppercase;  
 
@@ -62,8 +63,8 @@
 @media (min-width: @desktop-width) {
   .site-list__link {
     padding: 24px 0 19px;
-    color: #ffffff;   
-    background: @green;
+    align-items: baseline;
+    color: #ffffff;    
 
     &--active {
       border-bottom: 2px solid #ffffff;

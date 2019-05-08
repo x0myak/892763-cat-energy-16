@@ -1,10 +1,10 @@
 .options {
-  margin-bottom: 42px;
+  margin-bottom: 12px;
 }
 
 @media (min-width: @tablet-width) {
   .options {
-    margin-bottom: 44px;
+    margin-bottom: 21px;
   }
 }
 
@@ -14,30 +14,37 @@
   }
 }
 
-.options__description {
-  margin: 36px 35px 23px 21px;
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 1.29;
-  text-align: left;
-  color: #444444;
-  border-bottom: 1px solid #f2f2f2;
+.options__item {
+  position: relative;
+  margin-bottom: 20px; 
+  background-color: #f2f2f2;
 }
 
 @media (min-width: @tablet-width) {
-  .options__description {
-    padding: 26px 285px 61px 52px;
-    font-size: 16px;
-    line-height: 1.5;
+  .options__item {
+    margin-bottom: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .options__description {
-    margin: 35px 0 0 0;
-    padding: 45px 52px 36px;
-    font-size: 16px;
-    line-height: 1.5;
+  .options__item {
+    max-width: 570px;
+    min-height: 372px;
+  }
+}
+
+.options__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @desktop-width) {
+  .options__list {
+    flex-direction:row;
   }
 }
 
@@ -59,36 +66,11 @@
   }
 }
 
-.options__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-@media (min-width: @desktop-width) {
-  .options__list {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.options__item {
-  position: relative;
-  margin-top: 20px;
-  background-color: #f2f2f2;
-}
-
-@media (min-width: @desktop-width) {
-  .options__item {
-    max-width: 570px;
-    height: 372px;
-  }
-}
-
 .options__title {
   position: relative;
   margin: 0;
-  padding-top: 29px;
+  margin-bottom: 36px;
+  padding-top: 39px;
   padding-left: 92px;
   font-size: 24px;
   line-height: 1.54;
@@ -129,6 +111,7 @@
 
 @media (min-width: @tablet-width) {
   .options__title {
+    margin-bottom: 26px;
     padding-top: 81px;
     padding-left: 52px;
     font-size: 36px;
@@ -197,3 +180,34 @@
     }
   }
 }
+
+.options__description {
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0 36px 0 21px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: left;
+  color: #444444;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+@media (min-width: @tablet-width) {
+  .options__description {
+    margin-bottom: 61px;
+    padding: 0 285px 0 52px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .options__description {
+    margin: 35px 0 0 0;
+    padding: 45px 52px 36px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+

@@ -2,9 +2,8 @@
   margin: 0 auto;
   padding: 0 20px;
   max-width: @mobile-width;
-  width: 96%;
-  box-sizing: border-box;
-  outline: 2px solid orange;
+  width: 99%;
+  box-sizing: border-box;  
 }
 
 @media (min-width: @tablet-width) {
@@ -18,5 +17,17 @@
   .container {
     padding: 0 110px;
     max-width: 1440px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .inner-wrapper {
+    padding: 0 0 0 110px; 
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .inner-wrapper {
+    padding: 0 0 0 190px; 
   }
 }

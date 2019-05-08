@@ -1,6 +1,6 @@
 .page-footer {
   font-family: @main-font;
-  background-color: #f2f2f2;
+  
 }
 
 @media (min-width: @tablet-width) {
@@ -28,7 +28,8 @@
 
 .page-footer__contact p {
   margin: 0;
-  padding: 31px 0 28px;
+  margin-bottom: 26px;
+  padding-top: 31px;
 }
 
 @media (min-width: @tablet-width) {
@@ -39,6 +40,7 @@
 }
 
 .page-footer__slogan {
+  max-width: 123px;
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -51,6 +53,8 @@
 }
 
 .page-footer__address {
+  max-width: 123px;
+
   font-family: @second-font;
   font-size: 14px;
   line-height: 1.43;
@@ -81,6 +85,7 @@
 .page-footer__container {
   display: flex;
   flex-direction: column;
+  background-color: #f2f2f2;
 }
 
 @media (min-width: @tablet-width) {
