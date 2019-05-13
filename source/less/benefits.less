@@ -1,8 +1,50 @@
+.benefits {
+  margin-bottom: 42px;
+}
+
+@media (min-width: @tablet-width) {
+  .benefits {
+    margin-bottom: 51px;
+    border-bottom: 1px solid gray;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefits {
+    margin-bottom: 138px;
+    border-bottom: none;
+  }
+}
+
 .benefits__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  margin-left: 78px;
+}
+
+@media (min-width: @tablet-width) {
+  .benefits__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 0;
+    padding: 0  104px 0 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .benefits__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+  }
 }
 
 .benefits__title {
+  margin: 0;
+  margin-bottom: 35px;
   font-size: 36px;
   line-height: 1.67;
   text-align: left;
@@ -11,23 +53,89 @@
 
 @media (min-width: @tablet-width) {
   .benefits__title {
+    margin-top: 0;
+    margin-bottom: 63px;
     font-size: 60px;
     line-height: 1;
   }
 }
 
 .benefits__item {
+  position: relative;
+  min-height: 48px;
   margin-bottom: 32px;
-  font-family: "Arial", sans-serif;
+
+  font-family: @second-font;
   font-size: 14px;
   line-height: 1.29;
   text-align: left;
   color: @grey;
+
+  &::after {
+    content: "";
+    position: absolute;
+    align-self: start;
+    top: -5px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px auto;
+    background-color: @green;
+  }
+
+  &--nutrients::after {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--form::after {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--intake::after {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--changes::after {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
 }
 
 @media (min-width: @tablet-width) {
   .benefits__item {
+    width: 201px;
+    margin: 0;
+    margin-bottom: 106px;
+    padding-top: 117px;
+    padding-right: 80px;
     font-size: 16px;
     line-height: 1.5;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      margin-bottom: 37px;
+      width: 80px;
+      height: 80px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80px auto;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefits__item {
+    margin-bottom: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }

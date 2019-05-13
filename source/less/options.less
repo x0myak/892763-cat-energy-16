@@ -1,16 +1,57 @@
-.options__description {
-  margin: 36px 35px 23px 21px;
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 1.29;
-  text-align: left;
-  color: #444444;
+.options {
+  margin-bottom: 12px;
+}
+
+@media (min-width: @tablet-width) {
+  .options {
+    margin-bottom: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .options {
+    margin-top: 373px;
+    margin-bottom: 79px;
+  }
+}
+
+.options__item {
+  position: relative;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+}
+
+@media (min-width: @tablet-width) {
+  .options__item {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .options__item {
+    max-width: 570px;
+    min-height: 372px;
+  }
+}
+
+.options__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @desktop-width) {
+  .options__list {
+    flex-direction: row;
+  }
 }
 
 .options__link {
   display: block;
-  margin-top: 20px;
-  margin-bottom: 22px;
+  padding: 20px 0 22px 20px;
   font-size: 16px;
   text-align: left;
   text-decoration: none;
@@ -18,46 +59,155 @@
   color: @black1;
 }
 
-.options ul {
-  list-style: none;
-}
-
-.options__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.options__item {
-  margin-top: 20px;
-  background-color: #f2f2f2;
+@media (min-width: @tablet-width) {
+  .options__link {
+    padding: 0 0 62px 53px;
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .options__title {
-  padding-top: 29px;
+  position: relative;
+  margin: 0;
+  margin-bottom: 36px;
+  padding-top: 39px;
+  padding-left: 92px;
   font-size: 24px;
   line-height: 1.54;
   text-transform: uppercase;
   color: @black1;
-}
 
-@media (min-width: @tablet-width) {
-  .options__title {
-    font-size: 36px;
-    line-height: 1.03;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @green;
+  }
+
+  &--loose::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: url("../img/icon-cat-slim.svg") no-repeat center;
+  }
+
+  &--gain::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 67px;
+    height: 50px;
+    background: url("../img/icon-cat-pro.svg") no-repeat center;
   }
 }
 
 @media (min-width: @tablet-width) {
+  .options__title {
+    margin-bottom: 26px;
+    padding-top: 81px;
+    padding-left: 52px;
+    font-size: 36px;
+    line-height: 1.03;
+
+    &::before {
+      top: 92px;
+      left: auto;
+      right: 62px;
+      width: 200px;
+      height: 200px;
+    }
+
+    &--loose {
+      &::after {
+        top: 80px;
+        left: auto;
+        right: 80px;
+        width: 141px;
+        height: 194px;
+      }
+    }
+
+    &--gain {
+      &::after {
+        top: 120px;
+        left: auto;
+        right: 35px;
+        width: 268px;
+        height: 113px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .options__title {
+    padding-left: 216px;
+
+    &::before {
+      top: 42px;
+      right: 0;
+      left: 50px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--loose {
+      &::after {
+        top: 33px;
+        right: 0;
+        left: 60px;
+        width: 71px;
+        height: 97px;
+      }
+    }
+
+    &--gain {
+      &::after {
+        top: 60px;
+        left: 35px;
+        right: 0;
+        width: 134px;
+        height: 57px;
+      }
+    }
+  }
+}
+
+.options__description {
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0 36px 0 21px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: left;
+  color: #444444;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+@media (min-width: @tablet-width) {
   .options__description {
+    margin-bottom: 61px;
+    padding: 0 285px 0 52px;
     font-size: 16px;
     line-height: 1.5;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .options__link {
-    font-size: 20px;
-    line-height: 1;
+@media (min-width: @desktop-width) {
+  .options__description {
+    margin: 35px 0 0 0;
+    padding: 45px 52px 36px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 }

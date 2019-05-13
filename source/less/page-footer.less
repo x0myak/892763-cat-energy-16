@@ -1,3 +1,126 @@
 .page-footer {
-  font-family: "oswald", "helvetica", sans-serif; /*для проверки*/
+  font-family: @main-font;
+}
+
+.page-footer__contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__contact {
+    display: none;
+  }
+}
+
+.page-footer__contact p {
+  margin: 0;
+  margin-bottom: 26px;
+  padding-top: 31px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__contact p {
+    width: 20%;
+    padding: 69px 0 62px;
+  }
+}
+
+.page-footer__slogan {
+  max-width: 123px;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__slogan {
+    font-size: 20px;
+  }
+}
+
+.page-footer__address {
+  max-width: 123px;
+
+  font-family: @second-font;
+  font-size: 14px;
+  line-height: 1.43;
+  color: @grey;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__address {
+    font-size: 16px;
+    text-align: right;
+  }
+}
+
+.page-footer__wrapper {
+  padding: 0 20px;
+}
+
+.page-footer__wrapper .index {
+  background-color: white;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    padding: 0 41px;
+  }
+}
+
+.page-footer__container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__container {
+    min-height: 150px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-footer__logo-image {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 39px;
+  padding-bottom: 31px;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__logo-image {
+    width: 128px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.page-footer__map {
+  position: relative;
+  margin: 0 auto;
+  /*background-image: url("../img/bg-map-mobile@1x.png");
+  min-height: 400px;*/
+  background-size: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__map {
+    width: 767px;
+    height: 400px;
+  }
 }

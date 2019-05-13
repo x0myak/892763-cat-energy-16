@@ -1,8 +1,18 @@
 .sample {
   text-align: left;
+  background-color: #f2f2f2;
+  color: @black1;
+}
+
+@media (min-width: @tablet-width) {
+  .sample {
+    background-color: white;
+  }
 }
 
 .sample__title {
+  margin: 0;
+  margin-bottom: 33px;
   font-size: 36px;
   line-height: 1.67;
   color: @black1;
@@ -10,12 +20,54 @@
 
 @media (min-width: @tablet-width) {
   .sample__title {
+    margin-bottom: 60px;
     font-size: 60px;
     line-height: 1;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .sample__title {
+    margin-bottom: 66px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .sample__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sample__container {
+    flex-direction: column;
+    background-color: #eaeaea;
+  }
+}
+
+.sample__list {
+  margin: 0;
+  margin-bottom: 38px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: space-between;
+  width: 280px;
+  list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .sample__list {
+    min-width: 366px;
+  }
+}
+
 .sample__description {
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0 10px 0 0;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.29;
@@ -24,7 +76,167 @@
 
 @media (min-width: @tablet-width) {
   .sample__description {
+    margin-bottom: 56px;
     font-size: 16px;
     line-height: 1.5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sample__description {
+    margin-bottom: 71px;
+    padding: 76px 139px 0 0;
+  }
+}
+
+.sample__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 124px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .sample__item {
+    width: 162px;
+  }
+}
+
+.sample__value {
+  display: block;
+  padding: 15px 0;
+  margin: 0;
+  font-family: @main-font;
+  font-size: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .sample__value {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+}
+
+.sample__field {
+  content: "";
+  margin-top: 55px;
+  left: 22px;
+  position: absolute;
+  width: 80px;
+  display: block;
+  font-family: @second-font;
+  font-size: 12px;
+  text-transform: lowercase;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .sample__field {
+    left: 35px;
+    font-size: 14px;
+    background-color: white;
+  }
+}
+
+.sample__costs {
+  margin-bottom: 44px;
+  font-size: 14px;
+  line-height: 1.43px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .sample__costs {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sample__costs {
+    padding-top: 49px;
+    padding-bottom: 75px;
+    text-align: left;
+  }
+}
+
+.sample__picture {
+  display: block; /*временно*/
+  outline: 1px solid red;
+  width: 311px;
+  height: 232px;
+  margin-bottom: 39px;
+  background: url("../img/before-mobile@1x.png"); /*временно*/
+}
+
+@media (min-width: @tablet-width) {
+  .sample__picture {
+    width: 636px;
+    height: 517px;
+    margin-bottom: 21px;
+    text-align: center;
+    background: url("../img/before-tablet@1x.png"); /*временно*/
+  }
+}
+
+.sample__controls {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 38px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+@media (min-width: @tablet-width) {
+  .sample__controls {
+    padding-bottom: 81px;
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+.sample__controls-before {
+  text-transform: uppercase;
+}
+
+.sample__controls-after {
+  text-transform: uppercase;
+}
+
+.sample__controls-slider {
+  position: relative;
+  box-sizing: border-box;
+  width: 84px;
+  height: 14px;
+  margin-top: 3px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+}
+
+.sample__controls-slider::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 35px;
+  height: 6px;
+  background-color: #68b738;
+  border-radius: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .sample__controls-slider {
+    width: 428px;
+    height: 6px;
   }
 }
