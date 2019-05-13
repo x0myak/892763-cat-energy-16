@@ -8,8 +8,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header class="page-header">
-  <div class="page-header__wrapper wrapper">
+<header class="page-header container">
     <a class="page-header__logo">
       <picture>
         <source media="(min-width: 1280px)" srcset="img/logo-desktop.svg">
@@ -17,23 +16,23 @@
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Кэт энерджи">
       </picture>
     </a>
-    <nav class="header-nav">
+    <nav class="header-nav header-nav--opened">
+      <button class="header-nav__toggle" type="button">Открыть меню</button>
       <ul class="header-nav__list site-list">
         <li class="site-list__item">
-          <a class="site-list__link" href="index.html">Главная</a>
+          <a class="site-list__link site-list__link-catalog">Главная</a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link site-list__link--active" href="catalog.html">Каталог продукции</a>
+          <a class="site-list__link site-list__link-catalog site-list__link--active" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link" href="form.html">Подбор программы</a>
+          <a class="site-list__link site-list__link-catalog" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
-  </div>
 </header>
 <main class="catalog">
-  <div class="catalog__container-mobile">
+  <div class="catalog__container-mobile container">
     <h1 class="catalog__title">Каталог продукции</h1>
     <ul class="catalog-list">
       <li class="catalog-list__item">
@@ -47,7 +46,7 @@
               <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
               <img class="catalog-list__img" src="./img/catalog-1-mobile-jpg.png" width="140" height="144" alt="Банка корма Cat Energy 500г Курица">
             </picture>
-          <table>
+          <table class="catalog-list__table">
             <th class="catalog-list__title">Cat Energy Pro 500г</th>
             <tr>
               <td class="catalog-list__field">Объем</td>
@@ -76,7 +75,7 @@
             <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
           <img class="catalog-list__img" src="./img/catalog-2-mobile-jpg.png" width="140" height="144" alt="Банка корма Cat Energy Pro 1000г Курица">
         </picture>
-            <table>
+            <table class="catalog-list__table">
               <th class="catalog-list__title">Cat Energy Pro 1000г</th>
               <tr>
                 <td class="catalog-list__field">Объем</td>
@@ -105,7 +104,7 @@
               <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
             <img class="catalog-list__img" src="./img/catalog-3-mobile-jpg.png" width="140" height="144" alt="Банка корма Cat Energy Pro 500г Рыба">
           </picture>
-            <table>
+            <table class="catalog-list__table">
               <th class="catalog-list__title">Cat Energy Pro 500г</th>
               <tr>
                 <td class="catalog-list__field">Объем</td>
@@ -134,7 +133,7 @@
               <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
             <img class="catalog-list__img" src="./img/catalog-4-mobile-jpg.png" width="140" height="144" alt="Банка корма Cat Energy Pro 1000г Рыба">
           </picture>
-            <table>
+            <table class="catalog-list__table">
               <th class="catalog-list__title">Cat Energy Pro 1000г</th>
               <tr>
                 <td class="catalog-list__field">Объем</td>
@@ -163,7 +162,7 @@
               <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
             <img class="catalog-list__img" src="./img/catalog-5-mobile-jpg.png" width="140" height="144" alt="Банка корма Cat Energy Slim 500г Гречка">
           </picture>
-            <table>
+            <table class="catalog-list__table">
               <th class="catalog-list__title">Cat Energy Slim 500г</th>
               <tr>
                 <td class="catalog-list__field">Объем</td>
@@ -192,7 +191,7 @@
               <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
             <img class="catalog-list__img" src="./img/catalog-6-mobile-jpg.png" width="140" height="144" alt="Банка корма Cat Energy Slim 1000г Гречка">
           </picture>
-            <table>
+            <table class="catalog-list__table">
               <th class="catalog-list__title">Cat Energy Slim 1000</th>
               <tr>
                 <td class="catalog-list__field">Объем</td>
@@ -221,7 +220,7 @@
               <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
             <img class="catalog-list__img" src="./img/catalog-7-mobile-jpg.png" width="140" height="144" alt="Банка корма Cat Energy Slim 500г Курица">
           </picture>
-            <table>
+            <table class="catalog-list__table">
               <th class="catalog-list__title">Cat Energy Slim 500г</th>
               <tr>
                 <td class="catalog-list__field">Объем</td>
@@ -250,41 +249,43 @@
         <div class="additions__wrapper">
           <ul class="additions__list">
             <li class="additions__item">
-              <!--<div class="additions__wrapper-tablet">-->
+              <div class="additions__wrapper-tablet">
                 <p class="additions__field">Сахарозаменитель</p>
                 <div class="additions__inner-wrapper">
                   <p class="additions__volume">1 упаковка (100г)</p>
                   <p class="additions__value">200 р.</p>
                 </div>
-              <!--</div>-->
+              </div>
               <button class="additions__button button">Заказать</button>
             </li>
             <li class="additions__item">
-              <!--<div class="additions__wrapper-tablet">-->
+              <div class="additions__wrapper-tablet">
                 <p class="additions__field">Питьевая вода</p>
                 <div class="additions__inner-wrapper">
                   <p class="additions__volume">5 литров</p>
                   <p class="additions__value">50 р.</p>
                 </div>
-              <!--</div>-->
+              </div>
               <button class="additions__button button">Заказать</button>
             </li>
             <li class="additions__item">
-              <!--<div class="additions__wrapper-tablet">-->
+              <div class="additions__wrapper-tablet">
                 <p class="additions__field">Молоко</p>
                 <div class="additions__inner-wrapper">
                   <p class="additions__volume">1 литр</p>
                   <p class="additions__value">100 р.</p>
                 </div>
-              <!--</div>-->
+              </div>
               <button class="additions__button button">Заказать</button>
             </li>
             <li class="additions__item">
+              <div class="additions__wrapper-tablet">
                 <p class="additions__field">Витамины</p>
                 <div class="additions__inner-wrapper">
                   <p class="additions__volume">1 упаковка (30г)</p>
                   <p class="additions__value">300 р.</p>
                 </div>
+              </div>
               <button class="additions__button button">Заказать</button>
             </li>
           </ul>
@@ -305,10 +306,14 @@
 
     </div>
   </div>
-  <a class="page-footer__map" href="#" target="_blank"><img src="img/bg-map-mobile@1x.png" width="100%" height="400"
+  <a class="page-footer__map" href="#" target="_blank">
+    <picture class="page-footer__map-wrapper">
+      <source media="(min-width: 1280px)" srcset="../img/bg-map-desktop@1x.png">
+      <source media="(min-width: 768px)" srcset="../img/img/bg-map-tablet@1x.png">
+      <img src="img/bg-map-mobile@1x.png" width="320" height="400"
                                                             alt="Точка на карте - Большая Конюшенная, 19."></a>
-
-  <div class="page-footer__container">
+    </picture>
+  <div class="page-footer__container container">
     <a class="page-footer__logo-image"><img src="./img/footer-logo.svg" width="128" height="24"
                                             alt="Логотип Cat Energy"></a>
     <div class="page-footer__social">

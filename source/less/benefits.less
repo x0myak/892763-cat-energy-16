@@ -1,5 +1,5 @@
 .benefits {
-  margin-bottom: 42px;  
+  margin-bottom: 42px;
 }
 
 @media (min-width: @tablet-width) {
@@ -12,6 +12,7 @@
 @media (min-width: @desktop-width) {
   .benefits {
     margin-bottom: 138px;
+    border-bottom: none;
   }
 }
 
@@ -42,7 +43,7 @@
 }
 
 .benefits__title {
-  margin: 0;  
+  margin: 0;
   margin-bottom: 35px;
   font-size: 36px;
   line-height: 1.67;
@@ -59,12 +60,6 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .benefits__title {
-    margin-bottom: 0;
-  }
-}
-
 .benefits__item {
   position: relative;
   min-height: 48px;
@@ -78,7 +73,7 @@
 
   &::after {
     content: "";
-    position: absolute;    
+    position: absolute;
     align-self: start;
     top: -5px;
     left: -80px;
@@ -121,7 +116,7 @@
       content: "";
       position: absolute;
       left: 0;
-      margin-bottom: 37px;     
+      margin-bottom: 37px;
       width: 80px;
       height: 80px;
       background-repeat: no-repeat;
@@ -133,13 +128,12 @@
 
 @media (min-width: @desktop-width) {
   .benefits__item {
-    margin: 0;
+    margin-bottom: 0;
 
     &::after {
       content: "";
       position: absolute;
-      left: 0;
-      top: 60px;
+      top: 0;
       background-repeat: no-repeat;
       background-position: center;
     }

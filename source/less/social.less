@@ -11,9 +11,10 @@
 
 @media (min-width: @tablet-width) {
   .social {
+    min-width: 124px;
     border: none;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
+    justify-content: space-between;
   }
 }
 
@@ -29,6 +30,13 @@
   background-repeat: no-repeat;
 }
 
+@media (min-width: @tablet-width) {
+  .social__button--vk {
+    width: 30px;
+    height: 16px;
+  }
+}
+
 .social__button--fb {
   width: 10px;
   height: 19px;
@@ -37,10 +45,24 @@
   background-repeat: no-repeat;
 }
 
+@media (min-width: @tablet-width) {
+  .social__button--fb {
+    width: 14px;
+    height: 28px;
+  }
+}
+
 .social__button--insta {
   width: 17px;
   height: 17px;
   background-image: url("../img/icon-insta-mobile.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .social__button--insta {
+    width: 23px;
+    height: 23px;
+  }
 }

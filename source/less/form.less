@@ -4,19 +4,22 @@
   line-height: 1.13;
 }
 
-.form__wrapper {
-  margin: 0 20px;
-}
-
 @media (min-width: @tablet-width) {
   .form__wrapper {
-    margin: 0 71px;
+    padding: 0 41px;
     font-size: 20px;
     line-height: 1.5;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .form__wrapper {
+    padding: 0;
+  }
+}
+
 .form__title {
+  margin-bottom: 35px;
   font-size: 36px;
   line-height: 1.67;
 }
@@ -42,6 +45,7 @@ fieldset {
 
 @media (min-width: @tablet-width) {
   .form__action {
+    width: 330px;
     margin-bottom: 69px;
     font-size: 20px;
     line-height: 1.5;
@@ -56,6 +60,7 @@ fieldset {
 @media (min-width: @desktop-width) {
   .form__container {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -94,6 +99,7 @@ fieldset {
 }
 
 .form__radio-wrapper {
+  margin-bottom: 31px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -114,24 +120,24 @@ fieldset {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding-bottom: 31px;
 }
 
 @media (min-width: @desktop-width) {
   .form__contact-wrapper {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 .form__legend {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 1;
 }
 
 @media (min-width: @tablet-width) {
   .form__legend {
-    padding-bottom: 70px;
+    margin-bottom: 70px;
     font-size: 36px;
   }
 }
@@ -143,6 +149,7 @@ fieldset {
 }
 
 .form__additions-wrapper {
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -159,11 +166,6 @@ fieldset {
 .form__additions-label {
   padding-bottom: 28px;
   text-transform: uppercase;
-
-  &--last {
-    padding-bottom: 43px;
-    text-transform: uppercase;
-  }
 }
 
 .form__text-additions {
@@ -182,6 +184,13 @@ fieldset {
   border: none;
   text-transform: uppercase;
   color: white;
+}
+
+@media (min-width: @desktop-width) {
+  .form__button {
+    margin-right: 82px;
+    margin-bottom: 82px;
+  }
 }
 
 .form-required {

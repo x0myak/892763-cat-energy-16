@@ -1,18 +1,5 @@
 .page-footer {
   font-family: @main-font;
-  
-}
-
-@media (min-width: @tablet-width) {
-  .page-footer {
-    margin-top: 72px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-footer {
-    margin-top: 82px;
-  }
 }
 
 .page-footer__contact {
@@ -93,7 +80,6 @@
     min-height: 150px;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 30px;
     align-items: center;
   }
 }
@@ -117,7 +103,8 @@
 
 @media (min-width: @tablet-width) {
   .page-footer__logo-image {
-    width: 164px;
+    width: 128px;
+    height: 24px;
     margin: 0;
     padding: 0;
   }
@@ -129,23 +116,11 @@
   /*background-image: url("../img/bg-map-mobile@1x.png");
   min-height: 400px;*/
   background-size: cover;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 55px;
-    height: 53px;
-    top: -150px;
-    right: 0;
-    left: 120px;
-    background: url("../img/map-pin.png") no-repeat center;
-  }
 }
 
 @media (min-width: @tablet-width) {
   .page-footer__map {
-    /*background-image: url("../img/bg-map-tablet@1x.png");
     width: 767px;
-    height: 400px;*/
+    height: 400px;
   }
 }
