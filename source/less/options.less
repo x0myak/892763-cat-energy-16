@@ -4,7 +4,7 @@
 
 @media (min-width: @tablet-width) {
   .options {
-    margin-bottom: 21px;
+    margin-bottom: 40px;
   }
 }
 
@@ -19,6 +19,10 @@
   position: relative;
   margin-bottom: 20px;
   background-color: #f2f2f2;
+}
+
+.options__item:last-child {  
+  margin-bottom: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -51,7 +55,7 @@
 
 .options__link {
   display: block;
-  padding: 20px 0 22px 20px;
+  padding: 10px 0 22px 20px;
   font-size: 16px;
   text-align: left;
   text-decoration: none;
@@ -70,19 +74,23 @@
 .options__title {
   position: relative;
   margin: 0;
-  margin-bottom: 36px;
-  padding-top: 39px;
-  padding-left: 92px;
+  margin-bottom: 34px;
+  padding-top: 30px;
+  padding-left: 20px;
   font-size: 24px;
   line-height: 1.54;
   text-transform: uppercase;
   color: @black1;
 
+  &--gain {
+    padding-left: 40px;
+  }
+
   &::before {
     content: "";
     position: absolute;
-    top: 20px;
-    left: 30px;
+    top: 25px;
+    left: 25px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -92,8 +100,8 @@
   &--loose::after {
     content: "";
     position: absolute;
-    top: 18px;
-    left: 30px;
+    top: 25px;
+    left: 25px;
     width: 50px;
     height: 50px;
     background: url("../img/icon-cat-slim.svg") no-repeat center;
@@ -103,7 +111,7 @@
     content: "";
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 15px;
     width: 67px;
     height: 50px;
     background: url("../img/icon-cat-pro.svg") no-repeat center;
@@ -112,25 +120,25 @@
 
 @media (min-width: @tablet-width) {
   .options__title {
-    margin-bottom: 26px;
-    padding-top: 81px;
+    margin-bottom: 25px;
+    padding-top: 75px;
     padding-left: 52px;
     font-size: 36px;
     line-height: 1.03;
 
     &::before {
-      top: 92px;
+      top: 88px;
       left: auto;
-      right: 62px;
+      right: 45px;
       width: 200px;
       height: 200px;
     }
 
     &--loose {
       &::after {
-        top: 80px;
+        top: 75px;
         left: auto;
-        right: 80px;
+        right: 75px;
         width: 141px;
         height: 194px;
       }
@@ -138,9 +146,9 @@
 
     &--gain {
       &::after {
-        top: 120px;
+        top: 130px;
         left: auto;
-        right: 35px;
+        right: 10px;
         width: 268px;
         height: 113px;
       }
@@ -185,7 +193,7 @@
 .options__description {
   margin: 0;
   margin-bottom: 23px;
-  padding: 0 36px 0 21px;
+  padding: 0 30px 0 21px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.29;
@@ -196,10 +204,14 @@
 
 @media (min-width: @tablet-width) {
   .options__description {
-    margin-bottom: 61px;
-    padding: 0 285px 0 52px;
+    margin-bottom: 55px;
+    padding: 0 260px 0 50px;
     font-size: 16px;
     line-height: 1.5;
+
+    &--gain {
+      padding-right: 300px;
+    }
   }
 }
 
