@@ -8,7 +8,7 @@
 }
 @media (min-width: 768px) {
   .container {
-    padding: 0 30px;
+    padding: 0 25px;
     max-width: 768px;
   }
 }
@@ -261,8 +261,8 @@ h3 {
 }
 @media (min-width: 768px) {
   .benefits {
-    margin-bottom: 51px;
-    border-bottom: 1px solid gray;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #f2f2f2;
   }
 }
 @media (min-width: 1268px) {
@@ -308,7 +308,7 @@ h3 {
 }
 .benefits__title {
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 35px;
   font-size: 36px;
   line-height: 1.67;
   text-align: left;
@@ -317,7 +317,7 @@ h3 {
 @media (min-width: 768px) {
   .benefits__title {
     margin-top: 0;
-    margin-bottom: 80px;
+    margin-bottom: 45px;
     font-size: 60px;
     line-height: 1;
   }
@@ -362,7 +362,8 @@ h3 {
   .benefits__item {
     width: 236px;
     margin: 0;
-    margin-bottom: 140px;
+    margin-top: 35px;
+    margin-bottom: 105px;
     padding-top: 105px;
     margin-right: auto;
     font-size: 16px;
@@ -853,7 +854,7 @@ fieldset {
 .options__title {
   position: relative;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
   padding-top: 30px;
   padding-left: 20px;
   font-size: 24px;
@@ -903,21 +904,21 @@ fieldset {
   .options__title::before {
     top: 88px;
     left: auto;
-    right: 45px;
+    right: 50px;
     width: 200px;
     height: 200px;
   }
   .options__title--loose::after {
     top: 75px;
     left: auto;
-    right: 75px;
+    right: 80px;
     width: 141px;
     height: 194px;
   }
   .options__title--gain::after {
     top: 130px;
     left: auto;
-    right: 10px;
+    right: 20px;
     width: 268px;
     height: 113px;
   }
@@ -962,12 +963,12 @@ fieldset {
 @media (min-width: 768px) {
   .options__description {
     margin-bottom: 55px;
-    padding: 0 260px 0 50px;
+    padding: 0 265px 0 52px;
     font-size: 16px;
     line-height: 1.5;
   }
   .options__description--gain {
-    padding-right: 300px;
+    padding-right: 303px;
   }
 }
 @media (min-width: 1268px) {
@@ -1066,8 +1067,7 @@ fieldset {
 }
 @media (min-width: 768px) {
   .page-footer__contact p {
-    width: 20%;
-    padding: 69px 0 62px;
+    padding: 55px 0 62px 30px;
   }
 }
 .page-footer__slogan {
@@ -1078,6 +1078,7 @@ fieldset {
 }
 @media (min-width: 768px) {
   .page-footer__slogan {
+    max-width: 160px;
     font-size: 20px;
   }
 }
@@ -1152,14 +1153,12 @@ fieldset {
     padding: 0;
   }
 }
-.page-footer__map {
+.page-footer__map-image {
   position: relative;
   margin: 0 auto;
-  background-image: url("../img/bg-map-mobile@1x.png");
-  background-size: cover;
 }
 @media (min-width: 768px) {
-  .page-footer__map {
+  .page-footer__map-image {
     width: 767px;
     height: 400px;
   }
@@ -1194,9 +1193,7 @@ fieldset {
   }
 }
 .page-header__logo {
-  width: 191px;
-  height: 39px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 .page-header__logo:hover,
@@ -1207,7 +1204,7 @@ fieldset {
   opacity: 0.6;
 }
 @media (min-width: 768px) {
-  .page-header__logo {
+  .page-header__logo-image {
     width: 174px;
     height: 59px;
     -webkit-box-flex: 1;
@@ -1216,7 +1213,7 @@ fieldset {
   }
 }
 @media (min-width: 1268px) {
-  .page-header__logo {
+  .page-header__logo-image {
     width: 203px;
   }
 }
@@ -1444,27 +1441,28 @@ fieldset {
     margin-left: 195px;
   }
 }
-.page-main__image-wrapper {
+.page-main__logo-image {
   position: absolute;
   margin-top: -270px;
   margin-left: -140px;
-  width: 280px;
-  height: 269px;
 }
 @media (min-width: 768px) {
-  .page-main__image-wrapper {
+  .page-main__logo-image {
     position: relative;
-    top: 0;
-    left: 0;
+    margin-top: 0;
+    margin-left: 0;
+    width: 709px;
+    height: 609px;
   }
 }
 @media (min-width: 1268px) {
-  .page-main__image-wrapper {
-    margin-bottom: 80px;
-  }
   .page-main__logo-image {
-    width: 709px;
-    height: 609px;
+    position: absolute;
+    top: 142px;
+    left: -180px;
+    width: 552px;
+    height: 499px;
+    margin-bottom: 80px;
   }
 }
 @media (min-width: 1268px) {
@@ -1476,15 +1474,6 @@ fieldset {
     min-height: 696px;
     background: url("../img/index-background-desktop@1x.jpg") no-repeat;
     background-size: cover;
-  }
-}
-@media (min-width: 1268px) {
-  .page-main__logo-image {
-    position: absolute;
-    top: 142px;
-    left: -180px;
-    width: 552px;
-    height: 499px;
   }
 }
 .sample {
@@ -1507,7 +1496,8 @@ fieldset {
 }
 @media (min-width: 768px) {
   .sample__title {
-    margin-bottom: 60px;
+    margin-bottom: 65px;
+    padding: 0;
     font-size: 60px;
     line-height: 1;
   }
@@ -1538,7 +1528,7 @@ fieldset {
 }
 .sample__list {
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1558,6 +1548,7 @@ fieldset {
 @media (min-width: 768px) {
   .sample__list {
     min-width: 366px;
+    margin-bottom: 90px;
   }
 }
 .sample__description {
@@ -1613,6 +1604,7 @@ fieldset {
 }
 @media (min-width: 768px) {
   .sample__value {
+    padding-top: 15px;
     font-size: 30px;
     line-height: 1.23;
   }
@@ -1632,7 +1624,9 @@ fieldset {
 }
 @media (min-width: 768px) {
   .sample__field {
-    left: 35px;
+    left: 0;
+    margin-top: 60px;
+    width: 160px;
     font-size: 14px;
     background-color: white;
   }
@@ -1648,8 +1642,8 @@ fieldset {
   .sample__costs {
     margin: 0;
     padding: 0;
+    padding-top: 20px;
     font-size: 20px;
-    text-align: right;
   }
 }
 @media (min-width: 1268px) {
@@ -1659,24 +1653,14 @@ fieldset {
     text-align: left;
   }
 }
-.sample__picture {
-  display: block;
-  /*временно*/
-  outline: 1px solid red;
-  width: 311px;
-  height: 232px;
-  margin-bottom: 39px;
-  background: url("../img/before-mobile@1x.png");
-  /*временно*/
+.sample__picture-image {
+  margin-bottom: 35px;
 }
 @media (min-width: 768px) {
-  .sample__picture {
+  .sample__picture-image {
     width: 636px;
     height: 517px;
-    margin-bottom: 21px;
-    text-align: center;
-    background: url("../img/before-tablet@1x.png");
-    /*временно*/
+    margin-bottom: 10px;
   }
 }
 .sample__controls {
@@ -1686,21 +1670,23 @@ fieldset {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 38px;
+  padding-bottom: 35px;
   margin: 0 auto;
-  width: 200px;
+  width: 203px;
 }
 @media (min-width: 768px) {
   .sample__controls {
     padding-bottom: 81px;
-    width: 100%;
+    width: 80%;
     font-size: 20px;
   }
 }
 .sample__controls-before {
   text-transform: uppercase;
+  padding-left: 5px;
 }
 .sample__controls-after {
+  padding-left: 5px;
   text-transform: uppercase;
 }
 .sample__controls-slider {
