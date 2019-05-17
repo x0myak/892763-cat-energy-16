@@ -1,5 +1,5 @@
 .options {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 @media (min-width: @tablet-width) {
@@ -11,7 +11,7 @@
 @media (min-width: @desktop-width) {
   .options {
     margin-top: 373px;
-    margin-bottom: 79px;
+    margin-bottom: 45px;
   }
 }
 
@@ -21,8 +21,14 @@
   background-color: #f2f2f2;
 }
 
-.options__item:last-child {  
+.options__item:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width: @desktop-width) {
+  .options__item:last-child {
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -161,7 +167,7 @@
     padding-left: 216px;
 
     &::before {
-      top: 42px;
+      top: 50px;
       right: 0;
       left: 50px;
       width: 100px;
@@ -170,7 +176,7 @@
 
     &--loose {
       &::after {
-        top: 33px;
+        top: 40px;
         right: 0;
         left: 60px;
         width: 71px;
@@ -180,7 +186,7 @@
 
     &--gain {
       &::after {
-        top: 60px;
+        top: 68px;
         left: 35px;
         right: 0;
         width: 134px;
@@ -218,7 +224,7 @@
 @media (min-width: @desktop-width) {
   .options__description {
     margin: 35px 0 0 0;
-    padding: 45px 52px 36px;
+    padding: 40px 52px 30px;
     font-size: 16px;
     line-height: 1.5;
   }

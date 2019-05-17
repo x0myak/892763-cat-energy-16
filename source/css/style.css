@@ -14,7 +14,7 @@
 }
 @media (min-width: 1268px) {
   .container {
-    padding: 0 110px;
+    padding: 0 105px;
     max-width: 1440px;
   }
 }
@@ -257,7 +257,7 @@ h3 {
   }
 }
 .benefits {
-  margin-bottom: 42px;
+  margin-bottom: 45px;
 }
 @media (min-width: 768px) {
   .benefits {
@@ -384,6 +384,7 @@ h3 {
 @media (min-width: 1268px) {
   .benefits__item {
     margin-bottom: 0;
+    margin-top: 25px;
   }
   .benefits__item::after {
     content: "";
@@ -528,13 +529,13 @@ h3 {
 }
 .developer {
   position: relative;
-  padding: 30px 0;
+  padding: 25px 0;
 }
 .developer::after {
   content: "";
   position: absolute;
-  bottom: 30px;
-  right: 10px;
+  bottom: 20px;
+  right: 0;
   width: 27px;
   height: 34px;
   background: url("../img/htmlacademy-svg.svg") no-repeat center;
@@ -553,7 +554,7 @@ h3 {
   }
   ::after {
     bottom: 0;
-    right: 0;
+    right: -10px;
   }
 }
 .form-main {
@@ -780,7 +781,7 @@ fieldset {
   }
 }
 .options {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   .options {
@@ -790,7 +791,7 @@ fieldset {
 @media (min-width: 1268px) {
   .options {
     margin-top: 373px;
-    margin-bottom: 79px;
+    margin-bottom: 45px;
   }
 }
 .options__item {
@@ -800,6 +801,11 @@ fieldset {
 }
 .options__item:last-child {
   margin-bottom: 0;
+}
+@media (min-width: 1268px) {
+  .options__item:last-child {
+    margin-bottom: 20px;
+  }
 }
 @media (min-width: 768px) {
   .options__item {
@@ -928,21 +934,21 @@ fieldset {
     padding-left: 216px;
   }
   .options__title::before {
-    top: 42px;
+    top: 50px;
     right: 0;
     left: 50px;
     width: 100px;
     height: 100px;
   }
   .options__title--loose::after {
-    top: 33px;
+    top: 40px;
     right: 0;
     left: 60px;
     width: 71px;
     height: 97px;
   }
   .options__title--gain::after {
-    top: 60px;
+    top: 68px;
     left: 35px;
     right: 0;
     width: 134px;
@@ -974,7 +980,7 @@ fieldset {
 @media (min-width: 1268px) {
   .options__description {
     margin: 35px 0 0 0;
-    padding: 45px 52px 36px;
+    padding: 40px 52px 30px;
     font-size: 16px;
     line-height: 1.5;
   }
@@ -1062,12 +1068,11 @@ fieldset {
 }
 .page-footer__contact p {
   margin: 0;
-  margin-bottom: 26px;
-  padding-top: 25px;
+  margin-bottom: 45px;
 }
 @media (min-width: 768px) {
   .page-footer__contact p {
-    padding: 55px 0 62px 30px;
+    padding: 0 30px;
   }
 }
 .page-footer__slogan {
@@ -1118,7 +1123,7 @@ fieldset {
 }
 @media (min-width: 768px) {
   .page-footer__container {
-    min-height: 150px;
+    min-height: 145px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1135,7 +1140,7 @@ fieldset {
   margin-left: auto;
   margin-right: auto;
   padding-top: 36px;
-  padding-bottom: 25px;
+  padding-bottom: 27px;
   text-align: center;
 }
 .page-footer__logo-image:hover,
@@ -1163,8 +1168,14 @@ fieldset {
     height: 400px;
   }
 }
+@media (min-width: 1268px) {
+  .page-footer__map-image {
+    width: 100%;
+    height: 400px;
+  }
+}
 .page-header {
-  margin-top: 11px;
+  margin-top: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1189,7 +1200,7 @@ fieldset {
 @media (min-width: 1268px) {
   .page-header {
     margin-top: 54px;
-    margin-bottom: 83px;
+    margin-bottom: 95px;
   }
 }
 .page-header__logo {
@@ -1381,8 +1392,8 @@ fieldset {
 }
 .page-main__title {
   margin: 0;
-  margin-bottom: 19px;
-  padding: 29px 35px 0;
+  margin-bottom: 20px;
+  padding: 27px 35px 0;
   font-size: 36px;
   line-height: 1;
 }
@@ -1437,20 +1448,20 @@ fieldset {
 }
 @media (min-width: 1268px) {
   .page-main__button {
-    top: 450px;
-    margin-left: 195px;
+    top: 455px;
+    margin-left: 190px;
   }
 }
 .page-main__logo-image {
   position: absolute;
-  margin-top: -270px;
+  margin-top: -275px;
   margin-left: -140px;
 }
 @media (min-width: 768px) {
   .page-main__logo-image {
     position: relative;
     margin-top: 0;
-    margin-left: 0;
+    margin-left: 30px;
     width: 709px;
     height: 609px;
   }
@@ -1459,7 +1470,7 @@ fieldset {
   .page-main__logo-image {
     position: absolute;
     top: 142px;
-    left: -180px;
+    left: -190px;
     width: 552px;
     height: 499px;
     margin-bottom: 80px;
@@ -1469,6 +1480,7 @@ fieldset {
   .page-main__image-wrapper {
     position: absolute;
     z-index: 1;
+    top: 0;
     width: 50%;
     left: 50%;
     min-height: 696px;
@@ -1483,6 +1495,7 @@ fieldset {
 }
 @media (min-width: 768px) {
   .sample {
+    margin-bottom: 50px;
     background-color: white;
   }
 }
@@ -1551,6 +1564,11 @@ fieldset {
     margin-bottom: 90px;
   }
 }
+@media (min-width: 1268px) {
+  .sample__list {
+    margin-bottom: 20px;
+  }
+}
 .sample__description {
   margin: 0;
   margin-bottom: 24px;
@@ -1571,6 +1589,7 @@ fieldset {
   .sample__description {
     margin-bottom: 71px;
     padding: 76px 139px 0 0;
+    max-width: 430px;
   }
 }
 .sample__item {
@@ -1796,9 +1815,6 @@ fieldset {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   list-style: none;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
 }
 @media (min-width: 768px) {
   .social {
