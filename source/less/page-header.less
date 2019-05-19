@@ -1,54 +1,125 @@
 .page-header {
-  width: 100%;
-}
-
-.page-header__wrapper {
-  background-color: #ffffff;
+  margin-top: 11px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-}
-
-.page-header__logo {
-  margin: 11px 0 12px 20px;
-}
-
-.header-nav__list {
-  list-style: none;
 }
 
 @media (min-width: @tablet-width) {
-  .page-header__wrapper {
+  .page-header {
+    margin-top: 24px;
+    margin-bottom: 61px;
     flex-direction: row;
     justify-content: space-between;
   }
+}
 
-  .page-header__logo {
-    width: 174px;
-    margin-top: 24px;
-    margin-left: 29px;
-    margin-bottom: 0;
+@media (min-width: @desktop-width) {
+  .page-header {
+    margin-top: 54px;
+    margin-bottom: 83px;
+  }
+}
+
+.page-header__logo {
+  width: 191px;
+  height: 39px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
   }
 
-  .header-nav {
-    margin-top: 47px;
-    margin-right: 31px;
-    margin-left: 96px;
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    width: 174px;
+    height: 59px;
     flex-grow: 1;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    flex-basis: 50%;
-    margin-top: 53px;
-    margin-left: 109px;
+    width: 203px;
   }
+}
 
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+@media (min-width: @tablet-width) {
+  .header-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
   .header-nav {
     flex-basis: 50%;
     flex-grow: 0;
-    margin: 0;
-    margin-right: 110px;
+    z-index: 2;
+  }
+}
+
+.header-nav__list {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .header-nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header-nav__list {
+    align-items: center;
+  }
+}
+
+.header-nav__toggle {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+
+  width: 24px;
+  height: 18px;
+  font-size: 0;
+
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .header-nav__toggle {
+    display: none;
+  }
+}
+
+.form-header {
+  margin-bottom: 31px;
+}
+
+@media (min-width: @desktop-width) {
+  .form-header {
+    margin-bottom: 81px;
   }
 }
