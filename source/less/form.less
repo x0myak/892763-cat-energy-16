@@ -1,5 +1,5 @@
 .form-main {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.13;
@@ -76,6 +76,7 @@ fieldset {
   .form__container {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 5px;
   }
 }
 
@@ -100,13 +101,8 @@ fieldset {
   }
 }
 
-.form__input,
-.form__contact {
-  min-height: 40px;
-  flex-grow: 2;
-}
-
 .form__input-label {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -116,8 +112,38 @@ fieldset {
 
 @media (min-width: @tablet-width) {
   .form__input-label {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
+}
+
+.form__input,
+.form__contact {
+  padding: 11px 14px;
+  flex-grow: 1;
+  font-family: @main-font;
+  font-size: 16px;
+  line-height: 1.13;
+  text-transform: uppercase;
+  color: #444444;
+
+  &:hover {
+    border: solid 1px #cdcdcd;
+  }
+
+  &:focus {
+    border: solid 2px #444444;
+  }
+
+  /*&:invalid {
+    border: solid 2px #ff8282;
+  }*/
+}
+
+@media (min-width: @tablet-width) {
+  .form__input,
+  .form__contact {
+    padding: 14px 25px;
+ }
 }
 
 .form__text {
@@ -126,7 +152,7 @@ fieldset {
 }
 
 .form__radio-wrapper {
-  margin-bottom: 27px;
+  margin-bottom: 45px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -134,7 +160,7 @@ fieldset {
 
 @media (min-width: @tablet-width) {
   .form__radio-wrapper {
-    margin-bottom: 80px;
+    margin-bottom: 90px;
   }
 }
 
@@ -151,7 +177,8 @@ fieldset {
 
 .form__radio-label {
   position: relative;
-  margin-bottom: 26px;
+  margin-bottom: 16px;
+  padding-top: 7px;
   padding-left: 46px;
   text-transform: uppercase;
   cursor: pointer;
@@ -163,17 +190,17 @@ fieldset {
   &::before {
     content: "";
     position: absolute;
+    top: -1px;
+    left: -5px;
     width: 30px;
     height: 30px;
     border: 1px solid #d9d9d9;
-    border-radius: 50%;
-    top: -7px;
-    left: -5px;
+    border-radius: 50%;    
   }
 
   &:hover::before,
   :focus::before {
-    border: 1px solid #bcbcbc;
+    border: solid 1px #bababa;
   }
 
   &:active::before {
@@ -183,22 +210,23 @@ fieldset {
 
 @media (min-width: @tablet-width) {
   .form__radio-label {
-    margin-bottom: 23px;
+    margin-bottom: 15px;
     padding-left: 85px;
 
     &::before {
       width: 40px;
       height: 40px;
-      top: -5px;
+      top: 1px;
       left: 30px;
     }
-  }
+  }  
 }
 
 @media (min-width: @desktop-width) {
   .form__radio-label {
     margin-top: 25px;
     margin-bottom: 0;
+    padding-top: 0;
     padding-left: 10px;
 
     &::before {
@@ -210,11 +238,38 @@ fieldset {
   }
 }
 
+input[type="radio"]:checked + .form__radio-label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: @green;
+  border-radius: 50%;
+}
+
+@media (min-width: @tablet-width) {
+  input[type="radio"]:checked + .form__radio-label::after {  
+  left: 40px;
+  top: 12px;
+  width: 18px;
+  height: 18px;  
+  }
+}
+
+@media (min-width: @desktop-width) {
+  input[type="radio"]:checked + .form__radio-label::after {  
+  left: -33px;
+  top: 10px;   
+  }
+}
+
 .form__contact-wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 @media (min-width: @tablet-width) {
@@ -235,10 +290,22 @@ fieldset {
   }
 }
 
+/*.form__email {
+  position: absolute;
+  top: 31px;
+  left: 265px;
+  fill: @black;
+}*/
+
+
 .form__legend {
   margin-bottom: 30px;
   font-size: 24px;
   line-height: 1;
+
+  &--adds {
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -255,7 +322,7 @@ fieldset {
 .form__textarea {
   width: 100%;
   min-height: 150px;
-  margin-bottom: 31px;
+  margin-bottom: 27px;
 }
 
 @media (min-width: @tablet-width) {
@@ -268,6 +335,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  margin-bottom: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -282,27 +350,82 @@ fieldset {
   .form__additions-wrapper {
     max-width: 92%;
     justify-content: space-between;
-    margin-bottom: 65px;
+    margin-bottom: 85px;
   }
 }
 
 .form__additions-label {
+  position: relative;
+  display: block;
+  height: 14px;
+  margin-left: 30px;
   padding-bottom: 28px;
   text-transform: uppercase;
+  cursor: pointer;  
 }
+
 
 @media (min-width: @tablet-width) {
   .form__additions-label {
-    padding-left: 25px;
-    padding-right: 100px;
-    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 105px;
+    padding-bottom: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form__additions-label {
-    padding: 0 0 0 20px;
+    padding: 0 0 0 13px;
   }
+}
+
+.form__checkbox {
+  display: none;
+}
+
+input[type="checkbox"] + .form__additions-label::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: -4px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #cdcdcd;
+}
+
+@media (min-width: @tablet-width) {
+  input[type="checkbox"] + .form__additions-label::before {
+    left: -30px;
+    top: -1px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+input[type="checkbox"]:checked + .form__additions-label::after {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 3px;
+  width: 22px;
+  height: 17px;
+  background: url("../img/tick-svg.png") no-repeat;  
+}
+
+@media (min-width: @tablet-width) {
+  input[type="checkbox"]:checked + .form__additions-label::after {
+    left: -20px;
+    top: 10px;
+  }
+}
+
+input[type="checkbox"] + .form__additions-label:hover::before,
+input[type="checkbox"]:focus + .form__additions-label::before {
+  border-color: @green;
+}
+
+input[type="checkbox"]:disabled + .form__additions-label {
+  opacity: 0.3;
 }
 
 .form__text-additions {
@@ -326,14 +449,14 @@ fieldset {
 @media (min-width: @tablet-width) {
   .form__button {
     height: 52px;
-    margin-right: 50px;
+    margin-right: 65px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form__button {
     margin-right: 82px;
-    width: 46%;
+    width: 47%;
   }
 }
 

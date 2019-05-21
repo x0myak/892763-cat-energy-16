@@ -22,6 +22,7 @@
 
 .page-header__logo {
   margin-bottom: 10px;
+  margin-right: 14%;
   cursor: pointer;
 
   &:hover,
@@ -31,6 +32,12 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    width: 50%;
   }
 }
 
@@ -50,11 +57,9 @@
 
 .header-nav {
   position: relative;
-  /*display: flex;*/
+  display: flex;
   flex-direction: column;
   flex-grow: 2;
-
-  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -94,8 +99,8 @@
 
 .header-nav__toggle {
   position: absolute;
-  top: -25px;
-  right: 0;
+  top: -45px;
+  right: -10px;
   z-index: 2;
 
   display: block;
@@ -110,8 +115,8 @@
 .header-nav--closed::before {
   content: "";
   position: absolute;
-  top: -25px;
-  right: 17px;
+  top: -40px;
+  right: -1px;
 
   width: 24px;
   height: 18px;
@@ -123,8 +128,8 @@
 .header-nav--opened::before {
   content: "";
   position: absolute;
-  top: -24px;
-  right: 17px;
+  top: -40px;
+  right: -1px;
 
   width: 19px;
   height: 19px;
@@ -137,6 +142,28 @@
   .header-nav__toggle {
     display: none;
   }
+
+  .header-nav--closed::before {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-width-only) { 
+  .header-nav--closed .site-list__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+  
+  .header-nav--closed .user-list__item {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+    display: none;  
 }
 
 .form-header {
@@ -153,4 +180,8 @@
   .form-header {
     margin-bottom: 60px;
   }
+}
+
+.header-catalog {
+  margin-bottom: 15px;
 }

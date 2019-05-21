@@ -1,7 +1,13 @@
 .site-list {
-  list-style: none;
+  list-style: none;  
   padding: 0;
   margin: 0;
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    padding-left: 55px;
+  }
 }
 
 .site-list__item {
@@ -52,7 +58,7 @@
 
 @media (min-width: @tablet-width) {
   .site-list__link {
-    padding: 23px 0 21px;
+    padding: 21px 0 5px;
 
     &--active {
       border-bottom: 2px solid @green;
@@ -62,7 +68,7 @@
 
 @media (min-width: @desktop-width) {
   .site-list__link {
-    padding: 24px 0 19px;
+    padding: 15px 0 19px;
     align-items: baseline;
     color: #ffffff;
 
@@ -74,5 +80,10 @@
   .site-list-form,
   .site-list__link-catalog {
     color: @black1;
+  
+    &--active {
+      color: @black1;
+      border-bottom: 2px solid @green;
+    }
   }
 }
