@@ -20,7 +20,7 @@
 }
 @media (min-width: 768px) {
   .inner-wrapper {
-    padding: 0 0 0 115px;
+    padding: 0 0 0 118px;
   }
 }
 @media (min-width: 1268px) {
@@ -551,7 +551,7 @@ h3 {
     width: 164px;
     padding: 0;
   }
-  ::after {
+  .developer::after {
     bottom: 0;
     right: 0;
   }
@@ -580,7 +580,7 @@ h3 {
   }
 }
 .form__title {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 36px;
   line-height: 1.67;
 }
@@ -690,7 +690,7 @@ fieldset {
   margin-right: 15px;
 }
 .form__radio-wrapper {
-  margin-bottom: 31px;
+  margin-bottom: 27px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -712,13 +712,60 @@ fieldset {
         flex-basis: 40%;
   }
 }
+.form__radio {
+  border: solid 1px black;
+  display: none;
+}
 .form__radio-label {
+  position: relative;
   margin-bottom: 26px;
+  padding-left: 46px;
   text-transform: uppercase;
+  cursor: pointer;
+}
+.form__radio-label:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.form__radio-label::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  top: -7px;
+  left: -5px;
+}
+.form__radio-label:hover::before,
+.form__radio-label :focus::before {
+  border: 1px solid #bcbcbc;
+}
+.form__radio-label:active::before {
+  opacity: 0.3;
 }
 @media (min-width: 768px) {
   .form__radio-label {
     margin-bottom: 23px;
+    padding-left: 85px;
+  }
+  .form__radio-label::before {
+    width: 40px;
+    height: 40px;
+    top: -5px;
+    left: 30px;
+  }
+}
+@media (min-width: 1268px) {
+  .form__radio-label {
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding-left: 10px;
+  }
+  .form__radio-label::before {
+    width: 40px;
+    height: 40px;
+    top: -5px;
+    left: -45px;
   }
 }
 .form__contact-wrapper {
@@ -731,6 +778,7 @@ fieldset {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  margin-bottom: 10px;
 }
 @media (min-width: 768px) {
   .form__contact-wrapper {
@@ -778,7 +826,6 @@ fieldset {
   }
 }
 .form__additions-wrapper {
-  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -802,10 +849,11 @@ fieldset {
 }
 @media (min-width: 1268px) {
   .form__additions-wrapper {
+    max-width: 92%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 65px;
   }
 }
 .form__additions-label {
@@ -814,8 +862,14 @@ fieldset {
 }
 @media (min-width: 768px) {
   .form__additions-label {
-    padding-left: 60px;
+    padding-left: 25px;
+    padding-right: 100px;
     padding-bottom: 40px;
+  }
+}
+@media (min-width: 1268px) {
+  .form__additions-label {
+    padding: 0 0 0 20px;
   }
 }
 .form__text-additions {
@@ -977,7 +1031,7 @@ fieldset {
   .options__title {
     margin-bottom: 25px;
     padding-top: 75px;
-    padding-left: 52px;
+    padding-left: 55px;
     font-size: 36px;
     line-height: 1.03;
   }
@@ -1043,7 +1097,7 @@ fieldset {
 @media (min-width: 768px) {
   .options__description {
     margin-bottom: 55px;
-    padding: 0 265px 0 52px;
+    padding: 0 265px 0 55px;
     font-size: 16px;
     line-height: 1.5;
   }
@@ -1147,7 +1201,7 @@ fieldset {
 }
 @media (min-width: 768px) {
   .page-footer__contact p {
-    padding: 55px 0 62px 30px;
+    padding: 55px 0 20px 30px;
   }
 }
 .page-footer__slogan {
@@ -1198,7 +1252,7 @@ fieldset {
 }
 @media (min-width: 768px) {
   .page-footer__container {
-    min-height: 150px;
+    min-height: 130px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1299,9 +1353,7 @@ fieldset {
 }
 .header-nav {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  /*display: flex;*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1401,7 +1453,7 @@ fieldset {
   }
 }
 .form-header {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   .form-header {
@@ -1509,7 +1561,7 @@ fieldset {
     position: absolute;
     top: 370px;
     width: 245px;
-    margin-left: 115px;
+    margin-left: 118px;
     padding: 0;
   }
   .page-main__link {
@@ -1535,7 +1587,7 @@ fieldset {
   .page-main__logo-image {
     position: relative;
     margin-top: 0;
-    margin-left: 0;
+    margin-left: 25px;
     width: 709px;
     height: 609px;
   }

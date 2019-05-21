@@ -25,8 +25,8 @@
   }
 }
 
-.form__title {  
-  margin-bottom: 20px;  
+.form__title {
+  margin-bottom: 25px;
   font-size: 36px;
   line-height: 1.67;
 }
@@ -109,7 +109,7 @@ fieldset {
 .form__input-label {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;  
+  align-items: baseline;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -126,7 +126,7 @@ fieldset {
 }
 
 .form__radio-wrapper {
-  margin-bottom: 31px;
+  margin-bottom: 27px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -144,14 +144,69 @@ fieldset {
   }
 }
 
+.form__radio {
+  border: solid 1px black;
+  display: none;
+}
+
 .form__radio-label {
+  position: relative;
   margin-bottom: 26px;
+  padding-left: 46px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    top: -7px;
+    left: -5px;
+  }
+
+  &:hover::before,
+  :focus::before {
+    border: 1px solid #bcbcbc;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .form__radio-label {
     margin-bottom: 23px;
+    padding-left: 85px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      top: -5px;
+      left: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__radio-label {
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding-left: 10px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      top: -5px;
+      left: -45px;
+    }
   }
 }
 
@@ -159,6 +214,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  margin-bottom: 10px;
 }
 
 @media (min-width: @tablet-width) {
@@ -209,7 +265,6 @@ fieldset {
 }
 
 .form__additions-wrapper {
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -224,9 +279,10 @@ fieldset {
 }
 
 @media (min-width: @desktop-width) {
-  .form__additions-wrapper {   
+  .form__additions-wrapper {
+    max-width: 92%;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 65px;
   }
 }
 
@@ -237,8 +293,15 @@ fieldset {
 
 @media (min-width: @tablet-width) {
   .form__additions-label {
-    padding-left: 60px;
+    padding-left: 25px;
+    padding-right: 100px;
     padding-bottom: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__additions-label {
+    padding: 0 0 0 20px;
   }
 }
 
