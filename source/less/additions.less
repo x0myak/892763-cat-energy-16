@@ -1,7 +1,15 @@
+@media (min-width: @tablet-width) {
+  .additions__wrapper {
+    margin-bottom: 80px;
+    /*padding: 0 30px 0 45px;*/
+  }
+}
+
 @media (min-width: @desktop-width) {
   .additions__wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0;
   }
 }
 
@@ -14,7 +22,14 @@
 @media (min-width: @tablet-width) {
   .additions__title {
     margin-bottom: 70px;
+    padding: 0 30px 0 45px;
     font-size: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additions__title {
+    padding: 0;
   }
 }
 
@@ -27,13 +42,16 @@
 
 @media (min-width: @tablet-width) {
   .additions__list {
-    margin-bottom: 28px;
+    margin-bottom: 95px;
+    padding: 0 30px 0 45px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .additions__list {
     flex-basis: 75%;
+    margin-bottom: 80px;
+    padding: 0;
   }
 }
 
@@ -49,12 +67,15 @@
   .additions__item {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .additions__item {
     flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 20px;
   }
 }
 
@@ -65,13 +86,16 @@
 
 @media (min-width: @tablet-width) {
   .additions__inner-wrapper {
-    flex-basis: 50%;
+    flex-basis: 40%;
+    justify-content: flex-end;
+    margin: 33px 0 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .additions__inner-wrapper {
     flex-basis: auto;
+    margin: 0;
   }
 }
 
@@ -85,6 +109,7 @@
 @media (min-width: @desktop-width) {
   .additions__wrapper-tablet {
     flex-basis: 50%;
+    padding-top: 20px;
   }
 }
 
@@ -99,6 +124,7 @@
 
 @media (min-width: @tablet-width) {
   .additions__field {
+    margin: 30px 0 25px 0;
     flex-basis: 50%;
     font-size: 20px;
   }
@@ -137,6 +163,7 @@
 
 @media (min-width: @tablet-width) {
   .additions__value {
+    margin-left: 50px;
     font-size: 16px;
     line-height: 1.25;
   }
@@ -164,6 +191,7 @@
 @media (min-width: @desktop-width) {
   .additions__button {
     width: 245px;
+    margin-left: 10px;
   }
 }
 
@@ -179,7 +207,10 @@
 @media (min-width: @tablet-width) {
   .additions__gift {
     min-height: 200px;
-    margin-bottom: 35px;
+    margin-bottom: 80px;
+    padding: 0;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    /*background-size: 708px 200px;*/
   }
 }
 
@@ -189,9 +220,9 @@
     height: 289px;
     margin: 0;
     padding: 0;
+    background-size: 245px 289px;
   }
 }
-
 
 .additions__gift-text {
   margin: 0;
