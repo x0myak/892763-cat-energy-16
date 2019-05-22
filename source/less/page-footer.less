@@ -110,8 +110,29 @@
   }
 }
 
-.page-footer__map-image {
+.page-footer__map-wrapper {
   position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -180px;
+    left: 45%;
+    width: 55px;
+    height: 53px;
+    background: url("../img/map-pin.png") no-repeat 50%;
+    background-size: contain;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__map-wrapper::after {
+    width: 113px;
+    height: 106px;
+  }
+}
+
+.page-footer__map-image {
   margin: 0 auto;
   width: 100%;
 }
