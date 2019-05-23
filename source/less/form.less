@@ -12,7 +12,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form__wrapper {
+  .form-main__wrapper {
     padding: 0 41px;
     font-size: 20px;
     line-height: 1.5;
@@ -20,19 +20,19 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__wrapper {
+  .form-main__wrapper {
     padding: 0;
   }
 }
 
-.form__title {
+.form-main__title {
   margin-bottom: 25px;
   font-size: 36px;
   line-height: 1.67;
 }
 
 @media (min-width: @tablet-width) {
-  .form__title {
+  .form-main__title {
     margin-bottom: 50px;
     font-size: 60px;
     line-height: 1;
@@ -40,7 +40,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__title {
+  .form-main__title {
     margin-bottom: 55px;
   }
 }
@@ -50,7 +50,7 @@ fieldset {
   border: none;
 }
 
-.form__action {
+.form-main__action {
   margin-bottom: 40px;
   padding-right: 40px;
   font-size: 14px;
@@ -59,7 +59,7 @@ fieldset {
 }
 
 @media (min-width: @tablet-width) {
-  .form__action {
+  .form-main__action {
     width: 330px;
     margin-bottom: 69px;
     font-size: 20px;
@@ -242,7 +242,7 @@ input[type="radio"]:checked + .form__radio-label::after {
   content: "";
   position: absolute;
   left: 5px;
-  top: 10px;
+  top: 9px;
   width: 12px;
   height: 12px;
   background-color: @green;
@@ -251,8 +251,8 @@ input[type="radio"]:checked + .form__radio-label::after {
 
 @media (min-width: @tablet-width) {
   input[type="radio"]:checked + .form__radio-label::after {
-    left: 40px;
-    top: 12px;
+    left: 42px;
+    top: 13px;
     width: 18px;
     height: 18px;
   }
@@ -261,7 +261,7 @@ input[type="radio"]:checked + .form__radio-label::after {
 @media (min-width: @desktop-width) {
   input[type="radio"]:checked + .form__radio-label::after {
     left: -33px;
-    top: 10px;
+    top: 7px;
   }
 }
 
@@ -431,6 +431,18 @@ input[type="checkbox"]:disabled + .form__additions-label {
 .form__text-additions {
   display: inline-block;
   padding-left: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__text-additions--milk {
+    margin-right: 95px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__text-additions--milk {
+    margin-right: 0;
+  }
 }
 
 .form__button {

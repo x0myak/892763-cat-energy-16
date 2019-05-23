@@ -56,6 +56,10 @@
   }
 }
 
+.catalog-list__item {
+  margin-bottom: 22px;
+}
+
 @media (min-width: @tablet-width) {
   .catalog-list__item {
     position: relative;
@@ -71,7 +75,6 @@
     width: 245px;
     padding: 0 35px;
     box-sizing: border-box;
-    background-color: lightgray;
   }
 }
 
@@ -88,47 +91,67 @@
 @media (min-width: @tablet-width) {
   .catalog-list__title {
     width: 80%;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
+    padding-left: 55px;
     font-size: 20px;
     text-align: center;
+    line-height: 1;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-list__title {
-    min-width: 165px;
+    width: 100%;
+    padding: 0 30px;
   }
+}
+
+.catalog-list__img {
+  padding-right: 40px;
 }
 
 @media (min-width: @tablet-width) {
   .catalog-list__img {
     position: absolute;
-    left: 80px;
+    left: 1px;
+    object-fit: contain;
 
     &--small {
       top: -45px;
-      width: 161px;
-      height: 172px;
     }
 
     &--big {
-      top: -55px;
-      width: 195px;
-      height: 208px;
+      top: -80px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-list__img {
+    position: absolute;
+    left: 1px;
+    object-fit: contain;
+
+    &--small {
+      top: -50px;
+    }
+
+    &--big {
+      top: -85px;
     }
   }
 }
 
 .catalog-list__table {
-  max-width: 50%;
   padding-top: 20px;
+  border-spacing: 1px;
 }
 
 @media (min-width: @tablet-width) {
   .catalog-list__table {
     max-width: 100%;
     padding: 160px 38px 5px;
-    border-spacing: 5px;
+    border-spacing: 7px;
   }
 }
 
@@ -136,7 +159,6 @@
   .catalog-list__table {
     max-width: 100%;
     padding: 152px 0 0;
-    border-spacing: 5px;
   }
 }
 
@@ -148,10 +170,7 @@
 
 @media (min-width: @tablet-width) {
   .catalog-list__field {
-    font-size: 16px;
-  }
-
-  .catalog-list__value {
+    margin-bottom: 17px;
     font-size: 16px;
   }
 }
@@ -169,9 +188,14 @@
   color: @grey;
 }
 
+@media (min-width: @tablet-width) {
+  .catalog-list__value {
+    font-size: 16px;
+  }
+}
+
 .catalog-list__button {
   width: 100%;
-  margin-bottom: 20px;
   padding: 10px 0;
   border: none;
   font-size: 16px;
@@ -185,7 +209,7 @@
 @media (min-width: @tablet-width) {
   .catalog-list__button {
     width: 78%;
-    margin: 30px 38px 0;
+    margin: 25px 38px 0;
   }
 }
 

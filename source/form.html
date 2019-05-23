@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="form">
 <header class="page-header form-header container">
     <a class="page-header__logo" href="index.html">
       <picture>
@@ -20,21 +20,21 @@
       <button class="header-nav__toggle" type="button"><span class="visually-hidden"> Открыть меню</span></button>
       <ul class="header-nav__list site-list">
         <li class="site-list__item">
-          <a class="site-list__link site-list-form"  href="index.html">Главная</a>
+          <a class="site-list__link"  href="index.html">Главная</a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link site-list-form" href="catalog.html">Каталог продукции</a>
+          <a class="site-list__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link site-list-form--active site-list__link--active">Подбор программы</a>
+          <a class="site-list__link site-list__link--active">Подбор программы</a>
         </li>
       </ul>
     </nav>
 </header>
 <main class="form-main container">
-  <h1 class="form__title">Подбор программы</h1>
-  <div class="form__wrapper">
-    <h2 class="form__action">Заполните анкету и мы подберем программу питания для вашего кота</h2>
+  <h1 class="form-main__title">Подбор программы</h1>
+  <div class="form-main__wrapper">
+    <h2 class="form-main__action">Заполните анкету и мы подберем программу питания для вашего кота</h2>
     <form class="form" action="https://htmlacademy.ru" method="get">
       <fieldset>
         <h2 class="visually-hidden">Данные кота</h2>
@@ -93,7 +93,7 @@
           </label>
           <input class="form__checkbox" type="checkbox" name="milk" id="milk">
           <label class="form__additions-label" for="milk">
-            <span class="form__text-additions">Молоко</span>
+            <span class="form__text-additions form__text-additions--milk">Молоко</span>
           </label>
           <input class="form__checkbox" type="checkbox" name="vitamins" id="vitamins">
           <label class="form__additions-label" for="vitamins">
@@ -118,9 +118,10 @@
       <source media="(min-width: 1280px)" srcset="./img/bg-map-desktop@1x.png">
       <source media="(min-width: 768px)" srcset="./img/bg-map-tablet@1x.png">
       <img class="page-footer__map-image" src="./img/bg-map-mobile@1x.png" width="320" height="360"
-                                                            alt="Точка на карте - Большая Конюшенная, 19."></a>
+                                                            alt="Точка на карте - Большая Конюшенная, 19.">
     </picture>
-  <div class="page-footer__container">
+  </a>
+  <div class="page-footer__container container">
     <a class="page-footer__logo-image"><img src="./img/footer-logo.svg" width="128" height="24"
                                             alt="Логотип Cat Energy"></a>
     <div class="page-footer__social">

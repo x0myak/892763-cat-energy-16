@@ -6,7 +6,7 @@
   width: 245px;
   min-height: 210px;
   box-sizing: border-box;
-  justify-content: space-around;
+  justify-content: flex-start;
   text-align: center;
 }
 
@@ -16,30 +16,59 @@
     height: 431px;
     margin-top: 80px;
     padding: 0 60px;
-    justify-content: flex-start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .others {
+    width: 245px;
+    padding: 0 10px 0 35px;
   }
 }
 
 .others__title {
-  padding-top: 85px;
+  position: relative;
+  padding-top: 82px;
+  margin-bottom: 10px;
   font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    width: 31px;
+    height: 31px;
+    background: url("../img/plus-mobile-svg.png") no-repeat;
+    background-size: contain;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .others__title {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     padding: 165px 25px 0;
     font-size: 20px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .others__title::before {
+    top: 53px;
+    left: 70px;
+    width: 61px;
+    height: 61px;
   }
 }
 
 .others__description {
   margin-top: 0;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   font-size: 12px;
   line-height: 1.33;
 }
@@ -53,7 +82,7 @@
 
 .others__link {
   display: block;
-  padding: 10px 0;
+  padding: 10px 0 10px 15px;
   font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.25;

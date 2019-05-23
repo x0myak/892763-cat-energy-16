@@ -14,7 +14,7 @@
 }
 
 .additions__title {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   font-size: 24px;
 }
@@ -75,6 +75,7 @@
   .additions__item {
     flex-direction: row;
     align-items: baseline;
+    max-width: 99%;
     margin-bottom: 20px;
   }
 }
@@ -94,7 +95,8 @@
 
 @media (min-width: @desktop-width) {
   .additions__inner-wrapper {
-    flex-basis: auto;
+    flex-basis: 50%;
+    justify-content: space-between;
     margin: 0;
   }
 }
@@ -108,7 +110,7 @@
 
 @media (min-width: @desktop-width) {
   .additions__wrapper-tablet {
-    flex-basis: 50%;
+    flex-basis: 68%;
     padding-top: 20px;
   }
 }
@@ -191,7 +193,6 @@
 @media (min-width: @desktop-width) {
   .additions__button {
     width: 245px;
-    margin-left: 10px;
   }
 }
 
