@@ -45,7 +45,7 @@
 
 .benefits__title {
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
   font-size: 36px;
   line-height: 1.67;
   text-align: left;
@@ -63,6 +63,7 @@
 
 .benefits__item {
   position: relative;
+  z-index: 1;
   min-height: 48px;
   margin-bottom: 25px;
 
@@ -78,6 +79,7 @@
     align-self: start;
     top: -5px;
     left: -80px;
+    z-index: 1;
     width: 60px;
     height: 60px;
     background-repeat: no-repeat;
@@ -110,7 +112,7 @@
     margin-top: 35px;
     margin-bottom: 105px;
     padding-top: 105px;
-    margin-right: auto;
+    /*margin-right: auto;*/
     font-size: 16px;
     line-height: 1.5;
 
@@ -125,6 +127,43 @@
       background-position: center;
       background-size: 80px auto;
     }
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      font-family: @main-font;
+      font-size: 281px;
+      color: #f2f2f2;
+    }
+
+    &--nutrients,
+    &--intake {
+      margin-right: 150px;
+    }
+
+    &--nutrients::before {
+      content: "1";
+      top: -113px;
+      right: 2px;
+    }
+
+    &--form::before {
+      content: "2";
+      top: -113px;
+      right: 2px;
+    }
+
+    &--intake::before {
+      content: "3";
+      top: -113px;
+      right: 2px;
+    }
+
+    &--changes::before {
+      content: "4";
+      top: -113px;
+      right: 2px;
+    }
   }
 }
 
@@ -132,6 +171,11 @@
   .benefits__item {
     margin-top: 25px;
     margin-bottom: 0;
+
+    &--nutrients,
+    &--intake {
+      margin-right: 0;
+    }
 
     &::after {
       content: "";
@@ -144,5 +188,7 @@
 }
 
 .benefits__description {
+  position: relative;
   margin: 0;
+  z-index: 2;
 }

@@ -174,6 +174,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .sample__field {
+    background-color: inherit;
+  }
+}
+
 .sample__costs {
   margin-bottom: 44px;
   font-size: 14px;
@@ -257,6 +263,7 @@
 @media (min-width: @desktop-width) {
   .sample__controls {
     margin: 495px 0 0;
+    padding-bottom: 65px;
     padding-left: 35px;
     width: 80%;
   }
@@ -286,7 +293,7 @@
 .sample__controls-slider::before {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 0;
   left: 5px;
   width: 35px;
   height: 6px;

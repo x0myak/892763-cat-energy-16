@@ -58,6 +58,7 @@
 }
 
 .options__link {
+  position: relative;
   display: block;
   padding: 10px 0 22px 20px;
   font-size: 16px;
@@ -65,6 +66,16 @@
   text-decoration: none;
   text-transform: uppercase;
   color: @black1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 41%;
+    width: 25px;
+    height: 12px;
+    background: url("../img/right-arrow-long-svg.png") no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -72,6 +83,18 @@
     padding: 0 0 62px 53px;
     font-size: 20px;
     line-height: 1;
+
+    &::before {
+      top: 2%;
+      left: 27%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .options__link::before {
+    top: 5%;
+    left: 32%;
   }
 }
 
@@ -209,12 +232,12 @@
 @media (min-width: @tablet-width) {
   .options__description {
     margin-bottom: 55px;
-    padding: 0 265px 0 55px;
+    padding: 0 275px 0 55px;
     font-size: 16px;
     line-height: 1.5;
 
     &--gain {
-      padding-right: 303px;
+      padding-right: 44%;
     }
   }
 }
