@@ -1,5 +1,5 @@
 .page-main {
-  font-family: "Oswald", "Helvetica", "Arial", sans-serif;
+  font-family: @oswald;
   text-align: center;
   color: #ffffff;
 }
@@ -54,9 +54,9 @@
 }
 
 .page-main__title {
-  margin: 0;
-  margin-bottom: 19px;
-  padding: 29px 35px 0;
+  max-width: 250px;
+  margin: 0 auto 20px;  
+  padding: 29px 0 0;
   font-size: 36px;
   line-height: 1;
 }
@@ -64,7 +64,7 @@
 @media (min-width: @tablet-width) {
   .page-main__title {
     max-width: 420px;
-    margin-bottom: 40px;
+    margin: 0 0 40px;
     padding: 0;
     font-size: 60px;
     line-height: 1;
@@ -72,14 +72,17 @@
 }
 
 .page-main__slogan {
-  margin: 0;
-  padding: 0 60px;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 0 60px 165px;
   font-size: 14px;
   text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
   .page-main__slogan {
+    max-width: 300px;
+    margin: 0;
     padding: 0;
     font-size: 20px;
     line-height: 1;
@@ -87,29 +90,24 @@
 }
 
 .page-main__link {
-  display: block;
-  padding-top: 12px;
-  padding-bottom: 10px;
+  display: block;  
   font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
+  line-height: 18px;  
   text-decoration: none;
-  color: #ffffff;
-  background-color: @green;
+  
 }
 
 @media (min-width: @tablet-width) {
   .page-main__button {
     position: absolute;
-    top: 370px;
-    width: 245px;
+    top: 370px;    
     margin-left: 118px;
     padding: 0;
   }
 
   .page-main__link {
-    padding-top: 17px;
-    padding-bottom: 15px;
+    /*padding-top: 17px;
+    padding-bottom: 15px;*/
     text-align: center;
     font-size: 20px;
     line-height: 1;
@@ -125,7 +123,7 @@
 
 .page-main__logo-image {
   position: absolute;
-  margin-top: -270px;
+  margin-top: -275px;
   margin-left: -140px;
 }
 

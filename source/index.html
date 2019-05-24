@@ -43,7 +43,7 @@
       <img class="page-main__logo-image" src="./img/index-can-mobile.png" width="280" height="270" alt="Питание для котов Cat Energy">
     </picture>
     <div class="page-main__button container">
-      <a class="page-main__link" href="form.html">Подобрать программу</a>
+      <a class="page-main__link button" href="form.html">Подобрать программу</a>
     </div>
   </section>
       <section class="options container">
@@ -99,15 +99,27 @@
               <p class="sample__field">затрачено времени</p>
             </li>
           </ul>
-          <p class="sample__costs">Затраты на питание:&nbsp;&nbsp;&nbsp; 15000 руб.</p>
+          <p class="sample__costs">Затраты на питание:&nbsp; 15000 руб.</p>
         </div>
       </div>
+      
         <div class="sample__auxiliary">
-          <picture class="sample__picture-wrapper">
-            <source media="(min-width: 1280px)" srcset="./img/before-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png">
-            <img class="sample__picture-image" src="./img/before-mobile@1x.png" width="311" height="232" alt="Фотографии кота до и после диеты">
-          </picture>
+          <div class="sample__picture">
+            <div class="sample__picture-wrapper sample__picture-wrapper--before">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="./img/before-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png">
+                <img class="sample__picture-image sample__picture-image--before" src="./img/before-mobile@1x.png" width="311" height="232" alt="Фотография кота до диеты">
+              </picture>
+            </div>
+            <div class="sample__picture-wrapper sample__picture-wrapper--after">    
+              <picture>
+                <source media="(min-width: 1300px)" srcset="./img/after-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png">
+                <img class="sample__picture-image sample__picture-image--after" src="./img/after-mobile@1x.png" width="320" height="240" alt="Фотография кота после диеты"> 
+              </picture>
+            </div>
+          </div>
           <div class="sample__controls"><span class="sample__controls-before">Было</span>
             <div class="sample__controls-slider"></div>
             <span class="sample__controls-after">Стало</span>
