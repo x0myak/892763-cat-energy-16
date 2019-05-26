@@ -131,13 +131,13 @@ fieldset {
     border: solid 1px #cdcdcd;
   }
 
-  &:focus {
+  &:active {
     border: solid 2px #444444;
   }
 
-  &:invalid {
-    border: solid 2px #ff8282;
-  }
+  //&:active:required:invalid {
+  //  border: solid 2px #ff8282;
+  //}
 }
 
 @media (min-width: @tablet-width) {
@@ -149,7 +149,7 @@ fieldset {
 
 .form__text {
   display: inline-block;
-  margin-right: 15px;  
+  margin-right: 15px;
 }
 
 .form__radio-wrapper {
@@ -184,7 +184,8 @@ fieldset {
   text-transform: uppercase;
   cursor: pointer;
 
-  &:active {
+  &:active,
+  &:focus {
     color: rgba(0, 0, 0, 0.3);
   }
 
@@ -324,6 +325,7 @@ input[type="radio"]:checked + .form__radio-label::after {
   width: 100%;
   min-height: 150px;
   margin-bottom: 27px;
+  resize: vertical;
 }
 
 @media (min-width: @tablet-width) {
@@ -449,8 +451,6 @@ input[type="checkbox"]:disabled + .form__additions-label {
 .form__button {
   width: 280px;
   height: 40px;
-  background-color: @green;
-  font-family: @oswald;
   font-size: 16px;
   line-height: 1.25;
   font-weight: normal;

@@ -34,7 +34,7 @@
     line-height: 1;
   }
 
-  .sample__wrapper {    
+  .sample__wrapper {
     margin-bottom: 20px;
   }
 }
@@ -184,7 +184,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .sample__costs {    
+  .sample__costs {
     width: 150px;
     min-height: 50px;
     margin: 0;
@@ -209,7 +209,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .sample__auxiliary {   
+  .sample__auxiliary {
     justify-content: flex-end;
     height: 460px;
     background-color: #eaeaea;
@@ -225,9 +225,9 @@
 
 @media (min-width: @tablet-width) {
   .sample__picture {
-    position: relative;    
+    position: relative;
     width: 636px;
-    height: 517px;    
+    height: 517px;
     overflow: hidden;
   }
 }
@@ -236,11 +236,11 @@
   .sample__wrapper {
     flex-basis: 50%;
   }
-}  
+}
 
- @media (min-width: @tablet-width) {
-    .sample__picture-wrapper {
-    position: absolute;
+@media (min-width: @tablet-width) {
+  .sample__picture-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     top: 0;
@@ -270,24 +270,6 @@
   }
 }
 
-    /*@media (min-width: @desktop-width) {
-      width: 52.9%;
-    }
-
-    &--before {
-      z-index: 2;
-    }
-
-    &--after {
-      display: none;
-
-      @media (min-width: @tablet-width) {
-        display: block;        
-        z-index: 1;
-      }    
-    }
-}*/
-
 .sample__picture-image {
   display: block;
   margin-bottom: 35px;
@@ -303,19 +285,17 @@
     width: 690px;
     max-width: none;
     height: 517px;
-    
 
-  &--before {
+    &--before {
       top: 0;
       left: -10px;
       z-index: 6;
-          
     }
 
-    &--after {        
-        right: -5px;
-        top: 0;
-        z-index: 5;
+    &--after {
+      right: -5px;
+      top: 0;
+      z-index: 5;
     }
   }
 }
@@ -372,12 +352,16 @@
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+  }
 }
 
 .sample__controls-slider::before {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 0;
   left: 5px;
   width: 35px;
   height: 6px;
