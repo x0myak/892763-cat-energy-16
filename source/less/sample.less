@@ -188,7 +188,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .sample__costs {   
+<<<<<<< HEAD
+  .sample__costs {
     margin: 0;
     padding: 0;
     /*padding-top: 20px;*/
@@ -214,7 +215,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .sample__auxiliary {   
+  .sample__auxiliary {
     justify-content: flex-end;
     height: 460px;
     margin-top: 196px;
@@ -235,9 +236,10 @@
 
 @media (min-width: @tablet-width) {
   .sample__picture {
-  display: flex;       
+   display: flex;       
     width: 636px;
-    height: 517px;    
+    height: 517px;
+    overflow: hidden;
   }
 }
 
@@ -245,12 +247,12 @@
   .sample__wrapper {
     max-width: 430px;
   }
-}  
+}
 
  @media (min-width: @tablet-width) {
     .sample__picture-wrapper {    
     /*display: flex;
-    flex-direction: column;*/
+    flex-direction: column;*/    
     top: 0;
     bottom: 0;
     width: 50%;
@@ -275,24 +277,6 @@
   }
 }
 
-    /*@media (min-width: @desktop-width) {
-      width: 52.9%;
-    }
-
-    &--before {
-      z-index: 2;
-    }
-
-    &--after {
-      display: none;
-
-      @media (min-width: @tablet-width) {
-        display: block;        
-        z-index: 1;
-      }    
-    }
-}*/
-
 .sample__picture-image {
   display: block;
   margin-bottom: 35px;
@@ -308,19 +292,17 @@
     width: 690px;
     max-width: none;
     height: 517px;
-    
 
-  &--before {
+    &--before {
       top: 0;
       left: -10px;
       z-index: 6;
-          
     }
 
-    &--after {        
-        right: -5px;
-        top: 0;
-        z-index: 5;
+    &--after {
+      right: -5px;
+      top: 0;
+      z-index: 5;
     }
   }
 }
@@ -377,12 +359,16 @@
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+  }
 }
 
 .sample__controls-slider::before {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 0;
   left: 5px;
   width: 35px;
   height: 6px;
