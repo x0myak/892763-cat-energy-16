@@ -1,0 +1,39 @@
+.button {
+  width: 80%;  
+  padding: 11px 10%;  
+  font-family: @oswald;
+  color: #ffffff;
+  border: none;
+  background-color: @green;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 195px;
+    padding: 17px 25px 15px;     
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @green2;    
+  }
+
+  &:active {
+    background-color: @green2;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.button--grey {
+  background-color: @lightgrey;
+  
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
